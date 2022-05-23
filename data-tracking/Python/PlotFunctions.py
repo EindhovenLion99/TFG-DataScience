@@ -1,8 +1,10 @@
 # %%
 import pandas as pd
+import numpy as np
 import csv as csv
 import matplotlib.pyplot as plt
 from matplotlib.patches import Arc
+import matplotlib.animation as animation
 
 
 def plot_events(events, figax = None, indicators = ['Marker','Arrow'], 
@@ -33,6 +35,42 @@ def plot_frame(home_team, away_team, colors=('r', 'b'), PlayerMarkerSize=10, Pla
   
   ax.plot(home_team['ball_x'], home_team['ball_y'], 'ko', alpha=1.0)
   return fig, ax
+
+def clip(home_team, away_team, path, name='clip', fps=25, colors=('r', 'b'), velocity=False, PlayerMarkerSize=10, PlayerAlpha=0.7):
+  assert np.all(home_team.index == away_team.index)
+  index = home_team.index
+
+  FFMpegWritter = animation.writers['ffmpeg']
+  metadata = dict(title = 'Tracking data')
+  writer = FFMpegWritter(fps = fps, metadata = metadata)
+  filename = path + "/" + name + ".mp4"
+
+  fig, ax = plot_field()
+  fig.set_tight_layout(True)
+  print("Generating movie", end = '')
+  with writer.saving(fig, filename, 100):
+    for i in index:
+      figObjs = []
+      for team,color in zip( [home_team.loc[i], away_team.loc[i]], colors):
+        x_columns = [c for c in team.keys() if c[-2:].lower() == '_x' and c != 'ball_x']
+        y_columns = [c for c in team.keys() if c[-2:].lower() == '_y' and c != 'ball_y']
+        objs, = ax.plot(team[x_columns], team[y_columns], color + 'o', markersize = PlayerMarkerSize, alpha = PlayerAlpha)
+        figObjs.append(objs)
+      objs, = ax.plot(team['ball_x'], team['ball_y'], 'ko', markersize = 6, alpha = 1)
+      figObjs.append(objs)
+
+      frame_minute = int(team['Time [s]'] / 60)
+      frame_second = (team['Time [s]'] / 60 - frame_minute) * 60
+      time = "%d:%1.2f" % (frame_minute, frame_second)
+      objs = ax.text(-2.5, 54, time, fontsize = 14)
+      figObjs.append(objs)
+      writer.grab_frame()
+      for figobj in figObjs:
+        figobj.remove()
+
+  print("Done")
+  plt.clf()
+  plt.close(fig)
 
 def plot_field(fig_size=(11, 7)):
   #Create figure
