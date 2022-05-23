@@ -1,0 +1,463 @@
+Sem,Local,Goles1,Goles2,Visitante,Sedes
+1,Ponferradina,1,2,Castellon,Estadio El Toralin
+1,Sporting Gijon,1,0,UD Logroñes,Estadio Municipal El Molinon
+1,Leganes,1,0,Las Palmas,Estadio Municipal de Butarque
+1,Espanyol,3,0,Albacete,RCDE Stadium
+1,Oviedo,0,0,Cartagena,Estadio Nuevo Carlos Tartiere
+1,Mallorca,0,1,Rayo Vallecano,Iberostar Estadi
+1,CD Mirandes,0,0,Alcorcon,Estadio Municipal de Anduva
+1,Fuenlabrada,2,0,Lugo,Estadio Fernando Torres
+1,Tenerife,2,0,Malaga,Estadio Heliodoro Rodriguez Lopez
+2,CD Mirandes,1,1,Oviedo,Estadio Municipal de Anduva
+2,Alcorcon,2,0,Tenerife,Estadio Santo Domingo
+2,Castellon,0,1,Malaga,Nou Estadi Castalia
+2,Rayo Vallecano,2,1,Sabadell,Estadio del Rayo Vallecano
+2,Lugo,2,1,Leganes,Estadio Anxo Carro
+2,Espanyol,0,0,Mallorca,RCDE Stadium
+2,Cartagena,0,1,Sporting Gijon,Estadio Municipal Cartagonova
+2,Albacete,0,2,Ponferradina,Estadio Carlos Belmonte
+2,Las Palmas,3,3,Fuenlabrada,Estadio de Gran Canaria
+3,Zaragoza,2,2,Las Palmas,Estadio de la Romareda
+3,Sporting Gijon,2,0,Girona,Estadio Municipal El Molinon
+3,UD Logroñes,1,1,Castellon,Estadio Nuevo Municipal Las Gaunas
+3,Malaga,1,0,Alcorcon,Estadio La Rosaleda
+3,Fuenlabrada,1,0,Albacete,Estadio Fernando Torres
+3,Lugo,0,2,Almeria,Estadio Anxo Carro
+3,Mallorca,1,0,Sabadell,Iberostar Estadi
+3,Tenerife,1,2,CD Mirandes,Estadio Heliodoro Rodriguez Lopez
+3,Ponferradina,3,0,Rayo Vallecano,Estadio El Toralin
+3,Oviedo,0,2,Espanyol,Estadio Nuevo Carlos Tartiere
+3,Leganes,3,1,Cartagena,Estadio Municipal de Butarque
+4,CD Mirandes,0,1,Ponferradina,Estadio Municipal de Anduva
+4,Alcorcon,0,3,Zaragoza,Estadio Santo Domingo
+4,Albacete,1,1,Oviedo,Estadio Carlos Belmonte
+4,Mallorca,2,0,Tenerife,Iberostar Estadi
+4,Las Palmas,2,1,UD Logroñes,Estadio de Gran Canaria
+4,Rayo Vallecano,4,0,Malaga,Estadio del Rayo Vallecano
+4,Girona,0,1,Fuenlabrada,Estadi Municipal de Montilivi
+4,Sabadell,0,1,Espanyol,Estadi de la Nova Creu Alta
+4,Almeria,0,1,Sporting Gijon,Estadio de los Juegos Mediterraneos
+4,Castellon,2,0,Leganes,Nou Estadi Castalia
+4,Cartagena,2,1,Lugo,Estadio Municipal Cartagonova
+5,Sabadell,0,2,CD Mirandes,Estadi de la Nova Creu Alta
+5,Espanyol,1,0,Alcorcon,RCDE Stadium
+5,UD Logroñes,1,0,Almeria,Estadio Nuevo Municipal Las Gaunas
+5,Tenerife,1,0,Rayo Vallecano,Estadio Heliodoro Rodriguez Lopez
+5,Fuenlabrada,1,1,Castellon,Estadio Fernando Torres
+5,Lugo,0,1,Mallorca,Estadio Anxo Carro
+5,Leganes,0,1,Girona,Estadio Municipal de Butarque
+5,Malaga,0,0,Las Palmas,Estadio La Rosaleda
+5,Zaragoza,1,0,Albacete,Estadio de la Romareda
+5,Ponferradina,0,2,Cartagena,Estadio El Toralin
+5,Oviedo,1,0,Sporting Gijon,Estadio Nuevo Carlos Tartiere
+6,Albacete,3,0,Sabadell,Estadio Carlos Belmonte
+6,Las Palmas,2,0,Almeria,Estadio de Gran Canaria
+6,Cartagena,1,1,Fuenlabrada,Estadio Municipal Cartagonova
+6,UD Logroñes,0,1,Leganes,Estadio Nuevo Municipal Las Gaunas
+6,Castellon,0,1,Lugo,Nou Estadi Castalia
+6,Rayo Vallecano,1,0,Espanyol,Estadio del Rayo Vallecano
+6,CD Mirandes,0,0,Mallorca,Estadio Municipal de Anduva
+6,Zaragoza,1,2,Malaga,Estadio de la Romareda
+6,Girona,1,0,Oviedo,Estadi Municipal de Montilivi
+6,Sporting Gijon,1,1,Tenerife,Estadio Municipal El Molinon
+7,Espanyol,2,0,CD Mirandes,RCDE Stadium
+7,Las Palmas,2,1,Castellon,Estadio de Gran Canaria
+7,Lugo,3,0,Girona,Estadio Anxo Carro
+7,Ponferradina,1,0,Tenerife,Estadio El Toralin
+7,Almeria,1,1,Cartagena,Estadio de los Juegos Mediterraneos
+7,Fuenlabrada,0,0,UD Logroñes,Estadio Fernando Torres
+7,Leganes,1,0,Zaragoza,Estadio Municipal de Butarque
+7,Oviedo,0,0,Rayo Vallecano,Estadio Nuevo Carlos Tartiere
+7,Mallorca,0,0,Albacete,Iberostar Estadi
+7,Malaga,1,0,Sporting Gijon,Estadio La Rosaleda
+8,UD Logroñes,2,3,Lugo,Estadio Nuevo Municipal Las Gaunas
+8,Cartagena,3,0,Las Palmas,Estadio Municipal Cartagonova
+8,Castellon,0,1,Girona,Nou Estadi Castalia
+8,Almeria,3,0,Fuenlabrada,Estadio de los Juegos Mediterraneos
+8,Sporting Gijon,2,1,Ponferradina,Estadio Municipal El Molinon
+8,Tenerife,0,0,Espanyol,Estadio Heliodoro Rodriguez Lopez
+8,Leganes,2,1,Oviedo,Estadio Municipal de Butarque
+8,Malaga,1,1,CD Mirandes,Estadio La Rosaleda
+8,Albacete,2,1,Rayo Vallecano,Estadio Carlos Belmonte
+8,Zaragoza,0,0,Sabadell,Estadio de la Romareda
+8,Alcorcon,0,2,Mallorca,Estadio Santo Domingo
+9,Girona,2,1,Cartagena,Estadi Municipal de Montilivi
+9,Castellon,1,2,Almeria,Nou Estadi Castalia
+9,Albacete,1,1,Las Palmas,Estadio Carlos Belmonte
+9,Espanyol,2,0,Ponferradina,RCDE Stadium
+9,Oviedo,2,3,UD Logroñes,Estadio Nuevo Carlos Tartiere
+9,Alcorcon,1,2,Sporting Gijon,Estadio Santo Domingo
+9,Tenerife,1,1,Lugo,Estadio Heliodoro Rodriguez Lopez
+9,CD Mirandes,1,0,Zaragoza,Estadio Municipal de Anduva
+9,Mallorca,3,1,Malaga,Iberostar Estadi
+9,Rayo Vallecano,2,0,Fuenlabrada,Estadio del Rayo Vallecano
+9,Sabadell,1,0,Leganes,Estadi de la Nova Creu Alta
+10,Cartagena,3,1,Albacete,Estadio Municipal Cartagonova
+10,Las Palmas,1,2,Oviedo,Estadio de Gran Canaria
+10,Leganes,1,0,CD Mirandes,Estadio Municipal de Butarque
+10,Zaragoza,0,0,Mallorca,Estadio de la Romareda
+10,Fuenlabrada,1,1,Tenerife,Estadio Fernando Torres
+10,Ponferradina,0,3,Sabadell,Estadio El Toralin
+10,Lugo,1,0,Rayo Vallecano,Estadio Anxo Carro
+10,Almeria,0,0,Girona,Estadio de los Juegos Mediterraneos
+10,UD Logroñes,1,0,Alcorcon,Estadio Nuevo Municipal Las Gaunas
+10,Sporting Gijon,1,0,Castellon,Estadio Municipal El Molinon
+10,Malaga,0,3,Espanyol,Estadio La Rosaleda
+1,Zaragoza,2,2,Girona,Estadio de la Romareda
+1,Sabadell,1,2,Almeria,Estadi de la Nova Creu Alta
+6,Alcorcon,0,1,Ponferradina,Estadio Santo Domingo
+11,Albacete,0,0,Leganes,Estadio Carlos Belmonte
+11,Cartagena,0,1,UD Logroñes,Estadio Municipal Cartagonova
+11,CD Mirandes,1,0,Sporting Gijon,Estadio Municipal de Anduva
+11,Espanyol,2,1,Lugo,RCDE Stadium
+11,Sabadell,1,2,Malaga,Estadi de la Nova Creu Alta
+11,Alcorcon,0,3,Fuenlabrada,Estadio Santo Domingo
+11,Rayo Vallecano,0,1,Almeria,Estadio del Rayo Vallecano
+11,Oviedo,4,0,Castellon,Estadio Nuevo Carlos Tartiere
+11,Mallorca,3,0,Ponferradina,Iberostar Estadi
+11,Tenerife,1,0,Zaragoza,Estadio Heliodoro Rodriguez Lopez
+11,Girona,1,1,Las Palmas,Estadi Municipal de Montilivi
+12,Zaragoza,1,2,Oviedo,Estadio de la Romareda
+12,Fuenlabrada,1,1,Espanyol,Estadio Fernando Torres
+12,Almeria,2,1,CD Mirandes,Estadio de los Juegos Mediterraneos
+12,Lugo,1,0,Albacete,Estadio Anxo Carro
+12,Girona,0,1,Mallorca,Estadi Municipal de Montilivi
+12,Leganes,1,0,Alcorcon,Estadio Municipal de Butarque
+12,Ponferradina,1,1,Malaga,Estadio El Toralin
+12,UD Logroñes,1,0,Sabadell,Estadio Nuevo Municipal Las Gaunas
+12,Castellon,2,1,Cartagena,Nou Estadi Castalia
+12,Las Palmas,1,0,Tenerife,Estadio de Gran Canaria
+12,Sporting Gijon,1,1,Rayo Vallecano,Estadio Municipal El Molinon
+13,Alcorcon,1,0,Lugo,Estadio Santo Domingo
+13,Espanyol,1,2,Girona,RCDE Stadium
+13,Malaga,1,2,Leganes,Estadio La Rosaleda
+13,CD Mirandes,4,1,Cartagena,Estadio Municipal de Anduva
+13,Rayo Vallecano,2,1,Castellon,Estadio del Rayo Vallecano
+13,Oviedo,1,1,Fuenlabrada,Estadio Nuevo Carlos Tartiere
+13,Sabadell,3,1,Las Palmas,Estadi de la Nova Creu Alta
+13,Mallorca,0,0,Sporting Gijon,Iberostar Estadi
+13,Tenerife,0,1,UD Logroñes,Estadio Heliodoro Rodriguez Lopez
+13,Ponferradina,2,1,Zaragoza,Estadio El Toralin
+13,Albacete,1,2,Almeria,Estadio Carlos Belmonte
+14,Girona,0,1,Malaga,Estadi Municipal de Montilivi
+14,Castellon,0,2,Alcorcon,Nou Estadi Castalia
+14,Lugo,0,0,Oviedo,Estadio Anxo Carro
+14,Las Palmas,0,2,CD Mirandes,Estadio de Gran Canaria
+14,Sporting Gijon,3,1,Sabadell,Estadio Municipal El Molinon
+14,Zaragoza,1,2,Rayo Vallecano,Estadio de la Romareda
+14,Fuenlabrada,1,1,Ponferradina,Estadio Fernando Torres
+14,Cartagena,1,2,Mallorca,Estadio Municipal Cartagonova
+14,Leganes,2,0,Espanyol,Estadio Municipal de Butarque
+14,UD Logroñes,2,0,Albacete,Estadio Nuevo Municipal Las Gaunas
+14,Almeria,2,0,Tenerife,Estadio de los Juegos Mediterraneos
+15,Alcorcon,1,0,Girona,Estadio Santo Domingo
+15,Malaga,2,2,Lugo,Estadio La Rosaleda
+15,Sabadell,1,2,Fuenlabrada,Estadi de la Nova Creu Alta
+15,Rayo Vallecano,0,0,Cartagena,Estadio del Rayo Vallecano
+15,CD Mirandes,1,1,Castellon,Estadio Municipal de Anduva
+15,Albacete,0,2,Tenerife,Estadio Carlos Belmonte
+15,Espanyol,2,0,Zaragoza,RCDE Stadium
+15,Ponferradina,3,2,Leganes,Estadio El Toralin
+15,Mallorca,4,0,UD Logroñes,Iberostar Estadi
+15,Las Palmas,3,2,Sporting Gijon,Estadio de Gran Canaria
+15,Oviedo,1,2,Almeria,Estadio Nuevo Carlos Tartiere
+16,Fuenlabrada,0,2,Malaga,Estadio Fernando Torres
+16,Girona,1,0,CD Mirandes,Estadi Municipal de Montilivi
+16,Cartagena,1,3,Espanyol,Estadio Municipal Cartagonova
+16,UD Logroñes,1,2,Ponferradina,Estadio Nuevo Municipal Las Gaunas
+16,Leganes,1,0,Rayo Vallecano,Estadio Municipal de Butarque
+16,Castellon,1,0,Zaragoza,Nou Estadi Castalia
+16,Lugo,1,1,Las Palmas,Estadio Anxo Carro
+16,Tenerife,1,2,Sabadell,Estadio Heliodoro Rodriguez Lopez
+16,Oviedo,1,1,Alcorcon,Estadio Nuevo Carlos Tartiere
+16,Almeria,0,1,Mallorca,Estadio de los Juegos Mediterraneos
+16,Sporting Gijon,0,0,Albacete,Estadio Municipal El Molinon
+17,Rayo Vallecano,2,1,UD Logroñes,Estadio del Rayo Vallecano
+17,Ponferradina,0,0,Las Palmas,Estadio El Toralin
+17,CD Mirandes,0,0,Lugo,Estadio Municipal de Anduva
+17,Malaga,1,2,Cartagena,Estadio La Rosaleda
+17,Alcorcon,0,1,Almeria,Estadio Santo Domingo
+17,Espanyol,2,0,Sporting Gijon,RCDE Stadium
+17,Albacete,0,2,Girona,Estadio Carlos Belmonte
+17,Sabadell,0,1,Oviedo,Estadi de la Nova Creu Alta
+17,Zaragoza,1,0,Fuenlabrada,Estadio de la Romareda
+17,Tenerife,0,0,Leganes,Estadio Heliodoro Rodriguez Lopez
+17,Mallorca,3,1,Castellon,Iberostar Estadi
+2,Almeria,1,0,Zaragoza,Estadio de los Juegos Mediterraneos
+7,Sabadell,1,1,Alcorcon,Estadi de la Nova Creu Alta
+2,Girona,2,0,UD Logroñes,Estadi Municipal de Montilivi
+18,Lugo,1,0,Ponferradina,Estadio Anxo Carro
+18,Oviedo,4,2,Tenerife,Estadio Nuevo Carlos Tartiere
+18,Leganes,0,1,Mallorca,Estadio Municipal de Butarque
+18,Castellon,3,0,Albacete,Nou Estadi Castalia
+18,Fuenlabrada,0,1,CD Mirandes,Estadio Fernando Torres
+18,UD Logroñes,0,3,Espanyol,Estadio Nuevo Municipal Las Gaunas
+18,Almeria,3,1,Malaga,Estadio de los Juegos Mediterraneos
+18,Las Palmas,0,0,Alcorcon,Estadio de Gran Canaria
+18,Cartagena,1,2,Sabadell,Estadio Municipal Cartagonova
+18,Sporting Gijon,1,0,Zaragoza,Estadio Municipal El Molinon
+18,Girona,0,0,Rayo Vallecano,Estadi Municipal de Montilivi
+19,Ponferradina,1,0,Oviedo,Estadio El Toralin
+19,Sabadell,1,1,Castellon,Estadi de la Nova Creu Alta
+19,Mallorca,2,3,Fuenlabrada,Iberostar Estadi
+19,Zaragoza,1,0,Lugo,Estadio de la Romareda
+19,Alcorcon,2,1,Cartagena,Estadio Santo Domingo
+19,Espanyol,2,1,Almeria,RCDE Stadium
+19,Rayo Vallecano,2,0,Las Palmas,Estadio del Rayo Vallecano
+19,Malaga,0,0,UD Logroñes,Estadio La Rosaleda
+19,CD Mirandes,0,2,Albacete,Estadio Municipal de Anduva
+19,Sporting Gijon,1,1,Leganes,Estadio Municipal El Molinon
+19,Tenerife,2,0,Girona,Estadio Heliodoro Rodriguez Lopez
+20,Fuenlabrada,0,0,Leganes,Estadio Fernando Torres
+20,Rayo Vallecano,2,1,Alcorcon,Estadio del Rayo Vallecano
+20,UD Logroñes,2,1,CD Mirandes,Estadio Nuevo Municipal Las Gaunas
+20,Cartagena,1,1,Zaragoza,Estadio Municipal Cartagonova
+20,Castellon,0,1,Tenerife,Nou Estadi Castalia
+20,Las Palmas,1,0,Espanyol,Estadio de Gran Canaria
+20,Albacete,1,1,Malaga,Estadio Carlos Belmonte
+20,Almeria,3,1,Ponferradina,Estadio de los Juegos Mediterraneos
+20,Oviedo,2,2,Mallorca,Estadio Nuevo Carlos Tartiere
+20,Girona,0,0,Sabadell,Estadi Municipal de Montilivi
+20,Lugo,0,0,Sporting Gijon,Estadio Anxo Carro
+21,Zaragoza,2,0,UD Logroñes,Estadio de la Romareda
+21,Malaga,1,1,Oviedo,Estadio La Rosaleda
+21,Mallorca,0,1,Las Palmas,Iberostar Estadi
+21,Tenerife,3,0,Cartagena,Estadio Heliodoro Rodriguez Lopez
+21,Espanyol,2,0,Castellon,RCDE Stadium
+21,Ponferradina,1,1,Girona,Estadio El Toralin
+21,Sporting Gijon,2,1,Fuenlabrada,Estadio Municipal El Molinon
+21,Sabadell,1,1,Lugo,Estadi de la Nova Creu Alta
+21,CD Mirandes,0,2,Rayo Vallecano,Estadio Municipal de Anduva
+22,Fuenlabrada,0,0,Alcorcon,Estadio Fernando Torres
+22,Albacete,1,0,Zaragoza,Estadio Carlos Belmonte
+22,Rayo Vallecano,1,3,Mallorca,Estadio del Rayo Vallecano
+22,Girona,1,0,Espanyol,Estadi Municipal de Montilivi
+22,Lugo,2,0,Tenerife,Estadio Anxo Carro
+22,Malaga,0,2,Ponferradina,Estadio La Rosaleda
+22,Almeria,2,2,Sabadell,Estadio de los Juegos Mediterraneos
+22,UD Logroñes,0,0,Oviedo,Estadio Nuevo Municipal Las Gaunas
+22,Castellon,2,0,Sporting Gijon,Nou Estadi Castalia
+22,Las Palmas,2,1,Leganes,Estadio de Gran Canaria
+22,Cartagena,0,2,CD Mirandes,Estadio Municipal Cartagonova
+21,Alcorcon,1,2,Albacete,Estadio Santo Domingo
+23,Zaragoza,1,0,Ponferradina,Estadio de la Romareda
+23,Oviedo,0,1,Albacete,Estadio Nuevo Carlos Tartiere
+23,Alcorcon,0,1,Malaga,Estadio Santo Domingo
+23,Mallorca,1,0,Girona,Iberostar Estadi
+23,Almeria,3,1,Castellon,Estadio de los Juegos Mediterraneos
+23,Sporting Gijon,0,0,Cartagena,Estadio Municipal El Molinon
+23,Espanyol,2,3,Rayo Vallecano,RCDE Stadium
+23,CD Mirandes,2,0,Las Palmas,Estadio Municipal de Anduva
+23,Tenerife,1,1,Fuenlabrada,Estadio Heliodoro Rodriguez Lopez
+23,Leganes,3,2,Lugo,Estadio Municipal de Butarque
+23,Sabadell,0,0,UD Logroñes,Estadi de la Nova Creu Alta
+24,Albacete,0,1,Mallorca,Estadio Carlos Belmonte
+24,Cartagena,2,0,Oviedo,Estadio Municipal Cartagonova
+24,UD Logroñes,0,4,Sporting Gijon,Estadio Nuevo Municipal Las Gaunas
+24,Fuenlabrada,1,1,Almeria,Estadio Fernando Torres
+24,Girona,0,2,Leganes,Estadi Municipal de Montilivi
+24,Malaga,1,2,Zaragoza,Estadio La Rosaleda
+24,Castellon,0,1,CD Mirandes,Nou Estadi Castalia
+24,Rayo Vallecano,0,1,Tenerife,Estadio del Rayo Vallecano
+24,Las Palmas,0,1,Sabadell,Estadio de Gran Canaria
+24,Ponferradina,2,0,Alcorcon,Estadio El Toralin
+24,Lugo,1,1,Espanyol,Estadio Anxo Carro
+25,Sabadell,1,1,Zaragoza,Estadi de la Nova Creu Alta
+25,Cartagena,2,2,Rayo Vallecano,Estadio Municipal Cartagonova
+25,CD Mirandes,3,3,Girona,Estadio Municipal de Anduva
+25,Tenerife,1,0,Ponferradina,Estadio Heliodoro Rodriguez Lopez
+25,Mallorca,1,2,Espanyol,Iberostar Estadi
+25,Almeria,3,1,Las Palmas,Estadio de los Juegos Mediterraneos
+25,Alcorcon,1,0,UD Logroñes,Estadio Santo Domingo
+25,Leganes,3,1,Albacete,Estadio Municipal de Butarque
+25,Sporting Gijon,1,0,Malaga,Estadio Municipal El Molinon
+25,Castellon,1,2,Fuenlabrada,Nou Estadi Castalia
+25,Oviedo,3,1,Lugo,Estadio Nuevo Carlos Tartiere
+21,Leganes,2,1,Almeria,Estadio Municipal de Butarque
+26,Ponferradina,1,0,CD Mirandes,Estadio El Toralin
+26,Espanyol,1,0,Sabadell,RCDE Stadium
+26,Albacete,0,1,Sporting Gijon,Estadio Carlos Belmonte
+26,Las Palmas,2,0,Cartagena,Estadio de Gran Canaria
+26,Leganes,1,0,Tenerife,Estadio Municipal de Butarque
+26,Mallorca,2,0,Almeria,Iberostar Estadi
+26,Girona,2,1,Castellon,Estadi Municipal de Montilivi
+26,Lugo,1,1,UD Logroñes,Estadio Anxo Carro
+26,Malaga,2,0,Rayo Vallecano,Estadio La Rosaleda
+26,Fuenlabrada,2,2,Oviedo,Estadio Fernando Torres
+26,Zaragoza,0,1,Alcorcon,Estadio de la Romareda
+27,Sabadell,0,0,Albacete,Estadi de la Nova Creu Alta
+27,Cartagena,1,0,Leganes,Estadio Municipal Cartagonova
+27,Rayo Vallecano,1,1,Ponferradina,Estadio del Rayo Vallecano
+27,Almeria,4,1,Lugo,Estadio de los Juegos Mediterraneos
+27,Castellon,4,0,Las Palmas,Nou Estadi Castalia
+27,UD Logroñes,0,1,Mallorca,Estadio Nuevo Municipal Las Gaunas
+27,Fuenlabrada,1,1,Girona,Estadio Fernando Torres
+27,Sporting Gijon,1,1,Espanyol,Estadio Municipal El Molinon
+27,Tenerife,3,1,Alcorcon,Estadio Heliodoro Rodriguez Lopez
+27,Oviedo,1,0,Zaragoza,Estadio Nuevo Carlos Tartiere
+27,CD Mirandes,1,0,Malaga,Estadio Municipal de Anduva
+28,Espanyol,1,1,Oviedo,RCDE Stadium
+28,Zaragoza,1,0,Tenerife,Estadio de la Romareda
+28,Las Palmas,1,1,Rayo Vallecano,Estadio de Gran Canaria
+28,Leganes,0,0,Castellon,Estadio Municipal de Butarque
+28,Albacete,1,1,UD Logroñes,Estadio Carlos Belmonte
+28,Malaga,2,0,Sabadell,Estadio La Rosaleda
+28,Ponferradina,2,2,Sporting Gijon,Estadio El Toralin
+28,Mallorca,2,1,Cartagena,Iberostar Estadi
+28,Girona,0,1,Almeria,Estadi Municipal de Montilivi
+28,Alcorcon,4,0,CD Mirandes,Estadio Santo Domingo
+28,Lugo,0,0,Fuenlabrada,Estadio Anxo Carro
+29,Cartagena,1,1,Ponferradina,Estadio Municipal Cartagonova
+29,Rayo Vallecano,3,2,Zaragoza,Estadio del Rayo Vallecano
+29,Fuenlabrada,1,2,Las Palmas,Estadio Fernando Torres
+29,Girona,1,1,Lugo,Estadi Municipal de Montilivi
+29,Castellon,2,1,Sabadell,Nou Estadi Castalia
+29,CD Mirandes,2,2,Espanyol,Estadio Municipal de Anduva
+29,UD Logroñes,0,1,Malaga,Estadio Nuevo Municipal Las Gaunas
+29,Sporting Gijon,2,0,Mallorca,Estadio Municipal El Molinon
+29,Tenerife,2,0,Albacete,Estadio Heliodoro Rodriguez Lopez
+29,Oviedo,1,3,Leganes,Estadio Nuevo Carlos Tartiere
+29,Almeria,0,0,Alcorcon,Estadio de los Juegos Mediterraneos
+30,Las Palmas,1,2,Girona,Estadio de Gran Canaria
+30,Sabadell,1,1,Sporting Gijon,Estadi de la Nova Creu Alta
+30,Mallorca,0,0,Oviedo,Iberostar Estadi
+30,Leganes,0,2,Fuenlabrada,Estadio Municipal de Butarque
+30,Espanyol,4,0,UD Logroñes,RCDE Stadium
+30,Ponferradina,2,1,Almeria,Estadio El Toralin
+30,Malaga,1,1,Tenerife,Estadio La Rosaleda
+30,Lugo,0,0,Castellon,Estadio Anxo Carro
+30,Alcorcon,0,3,Rayo Vallecano,Estadio Santo Domingo
+30,Albacete,2,0,Cartagena,Estadio Carlos Belmonte
+30,Zaragoza,1,0,CD Mirandes,Estadio de la Romareda
+31,Sporting Gijon,0,0,Alcorcon,Estadio Municipal El Molinon
+31,Castellon,1,3,Espanyol,Nou Estadi Castalia
+31,Oviedo,1,1,Ponferradina,Estadio Nuevo Carlos Tartiere
+31,Almeria,1,1,Leganes,Estadio de los Juegos Mediterraneos
+31,Cartagena,1,1,Malaga,Estadio Municipal Cartagonova
+31,UD Logroñes,1,1,Zaragoza,Estadio Nuevo Municipal Las Gaunas
+31,Lugo,0,1,Sabadell,Estadio Anxo Carro
+31,Girona,2,1,Albacete,Estadi Municipal de Montilivi
+31,Tenerife,1,1,Las Palmas,Estadio Heliodoro Rodriguez Lopez
+31,Fuenlabrada,4,1,Mallorca,Estadio Fernando Torres
+32,Alcorcon,1,1,Oviedo,Estadio Santo Domingo
+32,Malaga,0,3,Almeria,Estadio La Rosaleda
+32,Ponferradina,2,2,UD Logroñes,Estadio El Toralin
+32,Rayo Vallecano,0,1,Sporting Gijon,Estadio del Rayo Vallecano
+32,Albacete,0,1,Castellon,Estadio Carlos Belmonte
+32,Sabadell,2,2,Girona,Estadi de la Nova Creu Alta
+32,Espanyol,4,0,Fuenlabrada,RCDE Stadium
+32,Mallorca,1,0,Leganes,Iberostar Estadi
+32,Las Palmas,6,1,Lugo,Estadio de Gran Canaria
+32,Zaragoza,0,0,Cartagena,Estadio de la Romareda
+33,Almeria,0,1,Rayo Vallecano,Estadio de los Juegos Mediterraneos
+33,UD Logroñes,1,0,Tenerife,Estadio Nuevo Municipal Las Gaunas
+33,Girona,3,1,Ponferradina,Estadi Municipal de Montilivi
+33,Castellon,1,0,Oviedo,Nou Estadi Castalia
+33,Sporting Gijon,1,2,CD Mirandes,Estadio Municipal El Molinon
+33,Albacete,0,3,Espanyol,Estadio Carlos Belmonte
+33,Leganes,2,1,Sabadell,Estadio Municipal de Butarque
+33,Lugo,0,1,Malaga,Estadio Anxo Carro
+33,Las Palmas,1,1,Mallorca,Estadio de Gran Canaria
+33,Cartagena,2,1,Alcorcon,Estadio Municipal Cartagonova
+33,Fuenlabrada,0,1,Zaragoza,Estadio Fernando Torres
+34,Tenerife,1,0,Sporting Gijon,Estadio Heliodoro Rodriguez Lopez
+34,Ponferradina,0,0,Fuenlabrada,Estadio El Toralin
+34,Oviedo,0,0,Las Palmas,Estadio Nuevo Carlos Tartiere
+34,Rayo Vallecano,2,1,Girona,Estadio del Rayo Vallecano
+34,Malaga,2,0,Albacete,Estadio La Rosaleda
+34,Zaragoza,2,1,Almeria,Estadio de la Romareda
+34,Sabadell,1,1,Cartagena,Estadi de la Nova Creu Alta
+34,Mallorca,2,0,Lugo,Iberostar Estadi
+34,CD Mirandes,0,1,UD Logroñes,Estadio Municipal de Anduva
+34,Espanyol,2,1,Leganes,RCDE Stadium
+34,Alcorcon,2,1,Castellon,Estadio Santo Domingo
+31,Rayo Vallecano,0,1,CD Mirandes,Estadio del Rayo Vallecano
+35,Fuenlabrada,2,2,Sabadell,Estadio Fernando Torres
+35,Girona,3,0,Zaragoza,Estadi Municipal de Montilivi
+35,Lugo,1,3,Alcorcon,Estadio Anxo Carro
+35,Castellon,1,0,Mallorca,Nou Estadi Castalia
+35,Las Palmas,1,1,Malaga,Estadio de Gran Canaria
+35,Sporting Gijon,0,1,Oviedo,Estadio Municipal El Molinon
+35,Albacete,1,0,CD Mirandes,Estadio Carlos Belmonte
+35,UD Logroñes,0,0,Rayo Vallecano,Estadio Nuevo Municipal Las Gaunas
+35,Cartagena,0,0,Tenerife,Estadio Municipal Cartagonova
+35,Leganes,1,1,Ponferradina,Estadio Municipal de Butarque
+35,Almeria,1,1,Espanyol,Estadio de los Juegos Mediterraneos
+32,CD Mirandes,0,0,Tenerife,Estadio Municipal de Anduva
+36,Zaragoza,0,0,Sporting Gijon,Estadio de la Romareda
+36,Malaga,0,1,Fuenlabrada,Estadio La Rosaleda
+36,UD Logroñes,0,1,Cartagena,Estadio Nuevo Municipal Las Gaunas
+36,Espanyol,4,0,Las Palmas,RCDE Stadium
+36,Ponferradina,2,0,Lugo,Estadio El Toralin
+36,Oviedo,0,1,Girona,Estadio Nuevo Carlos Tartiere
+36,CD Mirandes,1,1,Almeria,Estadio Municipal de Anduva
+36,Alcorcon,1,2,Leganes,Estadio Santo Domingo
+36,Tenerife,1,1,Castellon,Estadio Heliodoro Rodriguez Lopez
+36,Rayo Vallecano,2,2,Albacete,Estadio del Rayo Vallecano
+36,Sabadell,1,0,Mallorca,Estadi de la Nova Creu Alta
+37,Lugo,2,2,Zaragoza,Estadio Anxo Carro
+37,Girona,1,0,Tenerife,Estadi Municipal de Montilivi
+37,Almeria,2,2,Oviedo,Estadio de los Juegos Mediterraneos
+37,Mallorca,2,1,CD Mirandes,Iberostar Estadi
+37,Fuenlabrada,2,1,Cartagena,Estadio Fernando Torres
+37,Espanyol,3,0,Malaga,RCDE Stadium
+37,Leganes,0,0,Sporting Gijon,Estadio Municipal de Butarque
+37,Castellon,0,0,UD Logroñes,Nou Estadi Castalia
+37,Las Palmas,2,0,Ponferradina,Estadio de Gran Canaria
+37,Sabadell,2,0,Rayo Vallecano,Estadi de la Nova Creu Alta
+37,Albacete,0,1,Alcorcon,Estadio Carlos Belmonte
+38,Tenerife,0,1,Almeria,Estadio Heliodoro Rodriguez Lopez
+38,Zaragoza,0,0,Espanyol,Estadio de la Romareda
+38,Ponferradina,0,1,Albacete,Estadio El Toralin
+38,Alcorcon,0,0,Las Palmas,Estadio Santo Domingo
+38,Malaga,1,1,Mallorca,Estadio La Rosaleda
+38,CD Mirandes,2,1,Fuenlabrada,Estadio Municipal de Anduva
+38,Oviedo,2,1,Sabadell,Estadio Nuevo Carlos Tartiere
+38,UD Logroñes,1,4,Girona,Estadio Nuevo Municipal Las Gaunas
+38,Cartagena,1,0,Castellon,Estadio Municipal Cartagonova
+38,Rayo Vallecano,1,1,Leganes,Estadio del Rayo Vallecano
+38,Sporting Gijon,1,0,Lugo,Estadio Municipal El Molinon
+39,Espanyol,0,2,Cartagena,RCDE Stadium
+39,Castellon,0,2,Ponferradina,Nou Estadi Castalia
+39,Lugo,2,1,CD Mirandes,Estadio Anxo Carro
+39,Las Palmas,0,2,Zaragoza,Estadio de Gran Canaria
+39,Almeria,1,1,Albacete,Estadio de los Juegos Mediterraneos
+39,Sabadell,0,2,Tenerife,Estadi de la Nova Creu Alta
+39,Fuenlabrada,1,2,Rayo Vallecano,Estadio Fernando Torres
+39,Mallorca,2,0,Alcorcon,Iberostar Estadi
+39,Leganes,3,0,UD Logroñes,Estadio Municipal de Butarque
+39,Oviedo,1,0,Malaga,Estadio Nuevo Carlos Tartiere
+39,Girona,1,0,Sporting Gijon,Estadi Municipal de Montilivi
+40,Cartagena,3,2,Almeria,Estadio Municipal Cartagonova
+40,Albacete,1,1,Lugo,Estadio Carlos Belmonte
+40,Ponferradina,1,4,Espanyol,Estadio El Toralin
+40,Alcorcon,2,0,Sabadell,Estadio Santo Domingo
+40,UD Logroñes,1,0,Fuenlabrada,Estadio Nuevo Municipal Las Gaunas
+40,Tenerife,0,1,Mallorca,Estadio Heliodoro Rodriguez Lopez
+40,CD Mirandes,0,0,Leganes,Estadio Municipal de Anduva
+40,Malaga,0,1,Girona,Estadio La Rosaleda
+40,Sporting Gijon,1,0,Las Palmas,Estadio Municipal El Molinon
+40,Rayo Vallecano,4,1,Oviedo,Estadio del Rayo Vallecano
+40,Zaragoza,3,0,Castellon,Estadio de la Romareda
+41,Mallorca,2,1,Zaragoza,Iberostar Estadi
+41,Espanyol,1,1,Tenerife,RCDE Stadium
+41,Oviedo,1,1,CD Mirandes,Estadio Nuevo Carlos Tartiere
+41,Las Palmas,3,2,Albacete,Estadio de Gran Canaria
+41,Almeria,2,1,UD Logroñes,Estadio de los Juegos Mediterraneos
+41,Fuenlabrada,0,0,Sporting Gijon,Estadio Fernando Torres
+41,Leganes,1,0,Malaga,Estadio Municipal de Butarque
+41,Lugo,2,1,Cartagena,Estadio Anxo Carro
+41,Castellon,0,2,Rayo Vallecano,Nou Estadi Castalia
+41,Girona,1,0,Alcorcon,Estadi Municipal de Montilivi
+41,Sabadell,2,0,Ponferradina,Estadi de la Nova Creu Alta
+42,Tenerife,2,2,Oviedo,Estadio Heliodoro Rodriguez Lopez
+42,Albacete,1,2,Fuenlabrada,Estadio Carlos Belmonte
+42,Sporting Gijon,0,2,Almeria,Estadio Municipal El Molinon
+42,Rayo Vallecano,0,1,Lugo,Estadio del Rayo Vallecano
+42,UD Logroñes,0,1,Las Palmas,Estadio Nuevo Municipal Las Gaunas
+42,Ponferradina,2,2,Mallorca,Estadio El Toralin
+42,Zaragoza,0,5,Leganes,Estadio de la Romareda
+42,Cartagena,1,1,Girona,Estadio Municipal Cartagonova
+42,Alcorcon,1,0,Espanyol,Estadio Santo Domingo
+42,Malaga,3,0,Castellon,Estadio La Rosaleda
+42,CD Mirandes,0,2,Sabadell,Estadio Municipal de Anduva
