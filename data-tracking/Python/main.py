@@ -15,14 +15,11 @@ getstats.plotTeamStats(events, 'SHOT')
 # getstats.plotTeamPosesion(events)
 
 # %%
-events.loc[0:10]
+goals = events.loc[events['Subtype'].str.contains('TARGET-GOAL', na=False)]
+START_FRAME = events.loc[goals.index[0]]['Start Frame'] - 25 * 10
+print(START_FRAME)
 
 # %%
-FRAME = events.loc[0]['Start Frame']
-
-getplot.plot_frame(home.loc[FRAME], away.loc[FRAME], PlayerMarkerSize=11)
-
-# %%
-END_FRAME = FRAME + 25 * 60 * 1
-getplot.clip(home.loc[FRAME:END_FRAME], away.loc[FRAME:END_FRAME], path='.', PlayerMarkerSize=11)
+END_FRAME = START_FRAME + 25 * 60 * 0.5
+getplot.clip(home.loc[START_FRAME:END_FRAME], away.loc[START_FRAME:END_FRAME], path='.', PlayerMarkerSize=11)
 # %%

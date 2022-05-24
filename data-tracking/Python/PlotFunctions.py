@@ -47,7 +47,7 @@ def clip(home_team, away_team, path, name='clip', fps=25, colors=('r', 'b'), vel
 
   fig, ax = plot_field()
   fig.set_tight_layout(True)
-  print("Generating movie", end = '')
+  print("Generating movie...")
   with writer.saving(fig, filename, 100):
     for i in index:
       figObjs = []
