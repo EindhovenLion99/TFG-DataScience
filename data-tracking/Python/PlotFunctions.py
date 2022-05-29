@@ -32,7 +32,8 @@ def plot_frame(home_team, away_team, colors=('r', 'b'), PlayerMarkerSize=10, Pla
     x_columns = [c for c in team.keys() if c[-2:].lower() == '_x' and c != 'ball_x']
     y_columns = [c for c in team.keys() if c[-2:].lower() == '_y' and c != 'ball_y']
     ax.plot(team[x_columns], team[y_columns], color + 'o', markersize=PlayerMarkerSize, alpha=PlayerAlpha)
-  
+    if annotate:
+      [ ax.text(team[x]+0.5, team[y]+0.5, x.split('_')[1], fontsize=10, color=color  ) for x,y in zip(x_columns,y_columns) if not (np.isnan(team[x]) or np.isnan(team[y]))]
   ax.plot(home_team['ball_x'], home_team['ball_y'], 'ko', alpha=1.0)
   return fig, ax
 
@@ -145,3 +146,37 @@ def plot_field(fig_size=(11, 7)):
   #Tidy Axes
   ax.axis('on')
   return fig, ax
+
+def plot_minutes_played(team, team_str):
+  team_str = team_str.lower()
+  players = np.unique([c.split('_')[1] for c in team.columns if c[:4] == team_str])
+  player_summary = pd.DataFrame(index = players)
+
+  minutes = []
+
+  for pl in players:
+    column = team_str + '_' + pl + '_x'
+    pl_minutes = (team[column].last_valid_index() - team[column].first_valid_index() + 1) / 25 / 60
+    minutes.append(pl_minutes)
+
+  player_summary['Minutes Played'] = minutes
+  player_summary = player_summary.sort_values(['Minutes Played'], ascending = False)
+
+  player_summary['Minutes Played'].plot.bar(figsize=(10,8))
+
+def plot_total_distance(team, team_str):
+  team_str = team_str.lower()
+  players = np.unique([c.split('_')[1] for c in team.columns if c[:4] == team_str])
+  player_summary = pd.DataFrame(index = players)
+
+  distance = []
+
+  for pl in players:
+    column = team_str + '_' + pl + '_speed'
+    pl_distance = team[column].sum() / 25 / 1000
+    distance.append(pl_distance)
+
+  player_summary['Total Distance'] = distance
+  player_summary = player_summary.sort_values(['Total Distance'], ascending = False)
+
+  player_summary['Total Distance'].plot.bar(figsize=(10,8))
