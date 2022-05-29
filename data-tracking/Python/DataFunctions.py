@@ -1,8 +1,8 @@
 # %%
 import pandas as pd
+import numpy as np
 import csv as csv
 
-#  %%
 
 def read_match_data(game_id):
   home_positions = getGamePositions(game_id, 'Home')
@@ -10,9 +10,8 @@ def read_match_data(game_id):
   events = getEvents(game_id)
   return home_positions, away_positions, events
 
-# %%
 def getGamePositions(game_id, team):
-  eventfile = '../Sample_Game_%d/Sample_Game_%d_RawTrackingData_%s_Team.csv' % (game_id, game_id, team)
+  eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawTrackingData_%s_Team.csv' % (game_id, game_id, team)
   csvfile = open(eventfile, 'r')
   reader = csv.reader(csvfile)
   team = next(reader)[3].lower()
@@ -29,14 +28,31 @@ def getGamePositions(game_id, team):
 
   positions = pd.read_csv(eventfile, names = columns, index_col = 'Frame', skiprows = 3)
   positions = to_metric_coordinates(positions)
+  positions = getPlayerVel(positions)
   return positions
 
-# %%
+def getPlayerVel(team, maxspeed = 12):
+  player_ids = np.unique( [ c[:-2] for c in team.columns if c[:4] in ['home','away'] ] )
+  dt = team['Time [s]'].diff()
+  for player in player_ids: # cycle through players individually
+    # difference player positions in timestep dt to get unsmoothed estimate of velicity
+    vx = team[player + "_x"].diff() / dt
+    vy = team[player + "_y"].diff() / dt
+
+    if maxspeed > 0:
+        raw_speed = np.sqrt( vx**2 + vy**2 )
+        vx[ raw_speed > maxspeed ] = np.nan
+        vy[ raw_speed > maxspeed ] = np.nan
+
+    team[player + "_speed"] = np.sqrt( vx**2 + vy**2 )
+  return team
+
 
 def getEvents(game_id):
-  eventfile = '../Sample_Game_%d/Sample_Game_%d_RawEventsData.csv' % (game_id, game_id)
+  eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawEventsData.csv' % (game_id, game_id)
   events = pd.read_csv(eventfile)
   events = to_metric_coordinates(events)
+  events['Minute'] = events['Start Time [s]'] / 60
   return events
 
 def to_metric_coordinates(data, field_dimen = (106.,68.)):                      # Tranforma las coordenadas
