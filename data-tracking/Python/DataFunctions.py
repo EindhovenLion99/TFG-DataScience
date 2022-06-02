@@ -54,6 +54,9 @@ def getEvents(game_id, DATADIR):
   events = pd.read_csv(eventfile)
   events = to_metric_coordinates(events)
   events['Minute'] = events['Start Time [s]'] / 60
+  new_index = ['Team', 'Type', 'Subtype', 'Period', 'Minute', 'Start Frame', 'Start Time [s]', 'End Frame', 'End Time [s]', 
+               'From', 'To', 'Start X', 'Start Y', 'End X', 'End Y']
+  events = events.reindex(columns=new_index)
   return events
 
 def to_metric_coordinates(data, field_dimen = (106.,68.)):                      # Tranforma las coordenadas
