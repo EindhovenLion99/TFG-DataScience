@@ -1,17 +1,17 @@
-# %%
 import pandas as pd
 import numpy as np
 import csv as csv
 
 
-def read_match_data(game_id):
-  home_positions = getGamePositions(game_id, 'Home')
-  away_positions = getGamePositions(game_id, 'Away')
-  events = getEvents(game_id)
+def read_match_data(game_id, DATADIR):
+  home_positions = getGamePositions(game_id, 'Home', DATADIR)
+  away_positions = getGamePositions(game_id, 'Away', DATADIR)
+  events = getEvents(game_id, DATADIR)
   return home_positions, away_positions, events
 
-def getGamePositions(game_id, team):
-  eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawTrackingData_%s_Team.csv' % (game_id, game_id, team)
+def getGamePositions(game_id, team, DATADIR):
+  eventfile = DATADIR + '/Sample_Game_%d/Sample_Game_%d_RawTrackingData_%s_Team.csv' % (game_id, game_id, team)
+  # eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawTrackingData_%s_Team.csv' % (game_id, game_id, team)
   csvfile = open(eventfile, 'r')
   reader = csv.reader(csvfile)
   team = next(reader)[3].lower()
@@ -48,8 +48,9 @@ def getPlayerVel(team, maxspeed = 12):
   return team
 
 
-def getEvents(game_id):
-  eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawEventsData.csv' % (game_id, game_id)
+def getEvents(game_id, DATADIR):
+  eventfile = DATADIR + '/Sample_Game_%d/Sample_Game_%d_RawEventsData.csv' % (game_id, game_id)
+  # eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawEventsData.csv' % (game_id, game_id)
   events = pd.read_csv(eventfile)
   events = to_metric_coordinates(events)
   events['Minute'] = events['Start Time [s]'] / 60

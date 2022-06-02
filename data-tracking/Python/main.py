@@ -4,9 +4,10 @@
 import DataFunctions as getdata
 import PlotFunctions as getplot
 import Statistics as getstats
+dir = '../../NewNames'
 
 # %% -- Lectura de los datos
-home, away, events = getdata.read_match_data(2)
+home, away, events = getdata.read_match_data(2, dir)
 # %%
 getplot.plot_frame(home.iloc[51], away.iloc[51], annotate=True)
 
