@@ -53,8 +53,8 @@ def getEvents(game_id, DATADIR):
   # eventfile = '../../NewNames/Sample_Game_%d/Sample_Game_%d_RawEventsData.csv' % (game_id, game_id)
   events = pd.read_csv(eventfile)
   events = to_metric_coordinates(events)
-  events['Minute'] = events['Start Time [s]'] / 60
-  new_index = ['Team', 'Type', 'Subtype', 'Period', 'Minute', 'Start Frame', 'Start Time [s]', 'End Frame', 'End Time [s]', 
+  events['Minute'] = (events['Start Time [s]'] / 60).astype(int)
+  new_index = ['Team', 'Type', 'Subtype', 'Period', 'Minute', 'Start Frame', 'Start Time [s]', 'End Frame', 'End Time [s]',
                'From', 'To', 'Start X', 'Start Y', 'End X', 'End Y']
   events = events.reindex(columns=new_index)
   return events
