@@ -11,7 +11,7 @@ home, away, events = getdata.read_match_data(2, dir)
 
 # %%
 getstats.plotTeamPosesion(events)
- # %%
+# %%
 getplot.plot_frame(home.iloc[51], away.iloc[51], annotate=True)
 
 # %%

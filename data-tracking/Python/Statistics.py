@@ -14,7 +14,7 @@ def plotTeamPosesion(events):
   data = {'Team': teams, 'Possession': possession}
   df = pd.DataFrame(data ,columns=['Team','Possession'])
   df = df.set_index('Team')
-  df.plot(kind='pie', y="Possession")
+  df.plot(kind='pie', y="Possession", shadow=True, startangle=90, autopct='%1.1f%%')
 
 # Crea un grafico del total de eventos de cada equipo
 
