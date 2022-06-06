@@ -10,8 +10,8 @@ dir = '../../NewNames'
 home, away, events = getdata.read_match_data(2, dir)
 
 # %%
-events
-# %%
+getstats.plotTeamPosesion(events)
+ # %%
 getplot.plot_frame(home.iloc[51], away.iloc[51], annotate=True)
 
 # %%
