@@ -26,12 +26,16 @@ def plot_events(events, figax = None, indicators = ['Marker','Arrow'],
       ax.text( row['Start X'], row['Start Y'], textstring, fontsize=10, color = color)
   return fig, ax
 
-def plot_frame(home_team, away_team, colors=('r', 'b'), PlayerMarkerSize=10, PlayerAlpha=0.7, annotate=False):
+def plot_frame(home_team, away_team, colors=('r', 'b'), PlayerMarkerSize=10, PlayerAlpha=0.7, annotate=False, velocity=False):
   fig, ax = plot_field()
   for team,color in zip( [home_team, away_team], colors):
     x_columns = [c for c in team.keys() if c[-2:].lower() == '_x' and c != 'ball_x']
     y_columns = [c for c in team.keys() if c[-2:].lower() == '_y' and c != 'ball_y']
     ax.plot(team[x_columns], team[y_columns], color + 'o', markersize=PlayerMarkerSize, alpha=PlayerAlpha)
+    if velocity:
+      vx_columns = ['{}_vx'.format(c[:-2]) for c in x_columns]
+      vy_columns = ['{}_vy'.format(c[:-2]) for c in y_columns]
+      ax.quiver(team[x_columns], team[y_columns], team[vx_columns], team[vy_columns], color=color, scale_units='inches', scale=10, width=0.0015, headlength=5, headwidth=3, alpha=PlayerAlpha)
     if annotate:
       [ ax.text(team[x]+0.5, team[y]+0.5, x.split('_')[1], fontsize=10, color=color  ) for x,y in zip(x_columns,y_columns) if not (np.isnan(team[x]) or np.isnan(team[y]))]
   ax.plot(home_team['ball_x'], home_team['ball_y'], 'ko', alpha=1.0)
@@ -57,6 +61,11 @@ def clip(home_team, away_team, path, name='clip', fps=25, colors=('r', 'b'), vel
         y_columns = [c for c in team.keys() if c[-2:].lower() == '_y' and c != 'ball_y']
         objs, = ax.plot(team[x_columns], team[y_columns], color + 'o', markersize = PlayerMarkerSize, alpha = PlayerAlpha)
         figObjs.append(objs)
+        if velocity:
+          vx_columns = ['{}_vx'.format(c[:-2]) for c in x_columns]
+          vy_columns = ['{}_vy'.format(c[:-2]) for c in y_columns]
+          objs = ax.quiver(team[x_columns], team[y_columns], team[vx_columns], team[vy_columns], color=color, scale_units='inches', scale=10, width=0.0015, headlength=5, headwidth=3, alpha=PlayerAlpha)
+          figObjs.append(objs)
       objs, = ax.plot(team['ball_x'], team['ball_y'], 'ko', markersize = 6, alpha = 1)
       figObjs.append(objs)
 

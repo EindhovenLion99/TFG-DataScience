@@ -44,6 +44,8 @@ def getPlayerVel(team, maxspeed = 12):
         vx[ raw_speed > maxspeed ] = np.nan
         vy[ raw_speed > maxspeed ] = np.nan
 
+    team[player + "_vx"] = vx
+    team[player + "_vy"] = vy
     team[player + "_speed"] = np.sqrt( vx**2 + vy**2 )
   return team
 

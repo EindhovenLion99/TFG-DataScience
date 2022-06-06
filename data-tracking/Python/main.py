@@ -10,9 +10,11 @@ dir = '../../NewNames'
 home, away, events = getdata.read_match_data(2, dir)
 
 # %%
+home
+# %%
 getstats.plotTeamPosesion(events)
 # %%
-getplot.plot_frame(home.iloc[51], away.iloc[51], annotate=True)
+getplot.plot_frame(home.iloc[2891], away.iloc[2891], annotate=True, velocity=True)
 
 # %%
 goals = events.loc[events['Subtype'].str.contains('TARGET-GOAL', na=False)]
