@@ -30,13 +30,72 @@ ax_3.axvline(pl_mean, ls="--", color='r')
 
 
 # %%
-lesiones = [{
+lesiones = {
   'Pie': {
     'Cantidad': 0,
-    'Tobillo': 0
+    'Tobillo': 0,
+    'Talón': 0
   },
   'Pierna': {
     'Cantidad': 0,
-    
+    'Rodilla': 0,
+    'Gemelos': 0,
+    'Peroneos': 0,
+    'Sóleo': 0,
+    'Peroné': 0,
+    'Tibia': 0
+  },
+  'Muslo': {
+    'Cantidad': 0,
+    'Cuádriceps': 0,
+    'Isquiosurales': 0,
+    'Adductores': 0
+  },
+  'Hombro': {
+    'Cantidad': 0,
+    'Clavícula': 0,
+    'Hombro': 0
+  },
+  'Cadera': {
+    'Cantidad': 0,
+    'Psoas': 0,
+    'Ingle': 0,
+    'Glúteo': 0
+  },
+  'Mano': {
+    'Cantidad': 0,
+    'Muñeca': 0,
+    'Dedos': 0
+  },
+  'Tronco': {
+    'Cantidad': 0,
+    'Lumbar': 0
+  },
+  'Antebrazo': {
+    'Cantidad': 0,
+    'Muñeca': 0
+  },
+  'Tórax': {
+    'Cantidad': 0,
+    'Costillas': 0
   }
-}]
+}
+
+# %%
+lesiones_previas = jugadores['Lesiones Previas']
+for row in lesiones_previas:
+  if " ; " in row:
+    row_array = row.split(" ; ")
+    for a in row_array:
+      elems = a.split('-')
+      if elems[2].capitalize() in lesiones.keys():
+        lesiones[elems[2].capitalize()]['Cantidad'] += 1
+  elif row != 'No-Sin lesión':
+    elems = row.split('-')
+    if elems[2].capitalize() in lesiones.keys():
+      lesiones[elems[2].capitalize()]['Cantidad'] += 1
+
+lesiones
+
+
+# %%

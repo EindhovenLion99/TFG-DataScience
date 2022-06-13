@@ -10,7 +10,7 @@ Padre Anchieta,Luis Martín,25,160,No-Sin lesión,Sobrecarga gemelo-Gemelos-PIER
 Padre Anchieta,Vicente,22,192,No-Sin lesión,Rotura isquio-Isquiosurales-MUSLO ; Rotura cuadriceps-Cuádriceps-MUSLO,2,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
 Padre Anchieta,Diego,21,176,Rotura LCA-Rodilla-PIERNA ; Esguince tobillo-Tobillo-PIE,No-Sin lesión,0,Rec. Lig. Cruz.,0,1,0,Dcho,Delantero,Artificial med.,Artificial med.,0,0
 Padre Anchieta,Adri,18,174,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Miguel,20,186,Sí,Fx. muñeca-Muñeca-MANO ; Fx meñique-Dedos-MANO,2,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Miguel,20,186,No-Sin lesión,Fx. muñeca-Muñeca-MANO ; Fx meñique-Dedos-MANO,2,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,0,0
 Padre Anchieta,Asier,25,180,Lumbalgia-Lumbar-TRONCO,No-Sin lesión,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
 Padre Anchieta,Jose,18,174,No-Sin lesión,Esguince-Tobillo-PIE,1,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
 Padre Anchieta,Fernando,21,177,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
@@ -46,7 +46,7 @@ Laguna,Dani Hdez,21,170,Rotura cuádriceps-Cuádriceps-MUSLO,Esguince tobillo-To
 Laguna,Pecos,21,178,"""Corte"" menisco izquierdo-Rodilla-PIERNA",No-Sin lesión,0,No,0,0,0,Dcho,Mediocentro,Natural (plast.),Natural (plast.),1,0
 Laguna,Ale Matias,23,178,"Lesión tibial izquierdo, leve-Tibia-PIERNA",No-Sin lesión,0,Septoplastia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,0
 Laguna,Mariano,20,175,Fx primer dedo de la mano-Dedos-MANO,No-Sin lesión,0,Fx dedo,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
-Laguna,Gianluca C.,20,176,Isquiotibiales-Isquiosurales-PIERNA,Calcáneo-Talón-PIE,1,Fx de tibia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,1
+Laguna,Gianluca C.,20,176,Isquiotibiales-Isquiosurales-MUSLO,Calcáneo-Talón-PIE,1,Fx de tibia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,1
 Laguna,Ignacio Moya,30,180,Rotura cuadriceps dcho-Cuádriceps-MUSLO,No-Sin lesión,0,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,0,0
 Laguna,Néstor,20,179,LLE rodilla izquierda-Rodilla-PIERNA,No-Sin lesión,0,No,0,0,0,Izdo,Delantero,Natural (plast.),Natural (plast.),1,1
 Laguna,Joel Gonzalez,21,190,Rotura LCP-Rodilla-PIERNA ; Rotura LCP-Rodilla-PIERNA,No-Sin lesión,0,LCP dcho y menisco,0,1,0,Dcho,Defensa,Multitacos,Multitacos,1,0
