@@ -1,52 +1,52 @@
 Equipo,Jugador,Edad,Altura,Lesiones Previas,Lesiones Actuales,Total Lesiones,Operaciones,Diabetes,Corrección ort.,Escoliosis,Pie Dominante,Posición,Calzado entr.,Calzado part.,Preparación,Dieta
-Padre Anchieta,Luis Pastor,22,181, Fx Clavícula.; 2 Esg. Tobillo; Micr. Recto Anterior,Esg. tobillo-tobillo-pie; Tenosinovitis-rodilla-pierna,2,Hernia inguinal,0,0,1,Dcho,Delantero,Artificial med.,Artificial med.,1,0
-Padre Anchieta,Eduardo,22,185,Molestias Psoas,Microrrotura isquiotibiales,1,No,0,0,0,Izdo,Mediocentro,Multitacos,Multitacos,1,0
-Padre Anchieta,Alberto Brito,20,180,Luxación Hombro,Sobrecarga péctineo,1,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
-Padre Anchieta,Omar,26,175,No,No,0,No,0,0,1,Dcho,Defensa,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Keyber,21,170,Esguince tobillo derecho grado 1,Esg.tob.iz/Contr. isquio izdo,2,No,0,0,0,Dcho,Defensa,Multitacos,Natural (plast.),1,0
-Padre Anchieta,David,22,182,Rotura Cuádriceps,Posible Micr. Isq.,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Menso,23,180,Rots. leves isq. y cuadr.; 4 Esg. tob.;1 Esg. rod. grado1,Microrrotura adductor,1,No,0,0,1,Izdo,Mediocentro,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Luis Martín,25,160,No,Sobrecarga gemelo,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
-Padre Anchieta,Vicente,22,192,No,Rotura isquio y cuadriceps,2,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
-Padre Anchieta,Diego,21,176,Rotura LCA; Esguince tobillo,No,0,Rec. Lig. Cruz.,0,1,0,Dcho,Delantero,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Adri,18,174,No,No,0,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Miguel,20,186,Sí,Fx. muñeca y meñique,2,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Asier,25,180,Lumbalgia,No,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Jose,18,174,No,Esguince,1,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Fernando,21,177,No,No,0,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
-Padre Anchieta,Stefan,20,183,No,No,0,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,0
-Marino,Moises Mendez,21,179,Sobrecarga gemelo,Contusión cuadriceps,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
-Marino,Samuel Arbelo,25,185,Problemas pata ganso,P. ganso;Rotura Biceps Femoral,2,Labrum,0,0,1,Izdo,Defensa,Artificial med.,Artificial med.,0,0
-Marino,Nebai,23,174,No,No,0,No,0,0,0,Izdo,Mediocentro,Natural (plast.),Natural (plast.),1,1
-Marino,Aday,21,183,Despl. maleolo y rotula; esg. 2º grado,Despl. rotula; Rot. gemelo/BF,3,No,0,0,0,Izdo,Defensa,Artificial med.,Artificial med.,1,1
-Marino,Guille,18,175,No,No,0,No,0,0,1,Dcho,Portero,Natural (plast.),Natural (plast.),0,0
-Marino,Facu Valiente,25,180,Luxación músculos peroneos tobillo dcho,No,0,Tend. peroneos dcho,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,1,0
-Marino,Sergio Glez,23,183,No,No,0,No,0,1,0,Izdo,Portero,Natural (plast.),Natural (plast.),1,1
-Marino,Nami,26,180,Fx cubito rad. Contr. gemelo isq,"Contr. gemelo, sóleo; rot. isquio",3,Cubito radio,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,1
-Marino,Jonny,23,178,No,Tendinitis rotuliana ,1,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,0
-Marino,Aitor,23,185,"Rot. isquio, cuad. Esg. rodilla",No,0,No,0,0,0,Dcho,Defensa,Natural (plast.),Natural (plast.),0,0
-Marino,Javi Saavedra,27,185,No,Esguince tobillo leve,1,No,0,0,0,Izdo,Defensa,Natural (plast.),Natural (plast.),1,1
-Marino,Victor,29,188,"Esg tob y hernia inguinal ambos lados, fx costilla",Esguince tobillo,1,Tibia perone/hernias,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,1
-Marino,Vidal,27,192,Menisco interno rodilla izquierda,"Problemas add, rot BF",2,Menisco int rod iz.,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
-Marino,Jurgen,22,180,No,No,0,No,0,1,0,Dcho,Mediocentro,Artificial med.,Artificial med.,1,1
-Marino,Dani Reyes,21,173,"Esg. ambos. Rot. semim. semit dcho, gluteo",Esguince tobillos,2,No,0,0,0,Izdo,Mediocentro,Artificial med.,Artificial med.,0,0
-Marino,Adjona,19,178,No,Esguince tobillo derecho,1,No,0,0,0,Dcho,Mediocentro,Multitacos,Multitacos,1,0
-Marino,Espi,21,179,Fisura cubito y perone,Fisura perone,1,No,0,0,0,Dcho,Portero,Natural (plast.),Natural (plast.),0,0
-Marino,Andres,19,180,Fisura perone,Problemas adductor,1,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,1
-Marino,Freddy,24,179,No,Rotura BF,1,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
-Marino,Alberto,24,190,"Esguinces tobillo grado 1,2 y 3",Esguinces de tobillo,1,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
-Laguna,Alonso,20,186,Esguince rodilla izquierda,No,0,No,0,0,0,Izdo,Portero,Artificial med.,Artificial med.,1,1
-Laguna,Alejandro Magdalena,20,185,Rotura LLI,No,0,No,0,0,0,Dcho,Portero,Artificial med.,Artificial med.,0,0
-Laguna,Samu ,22,171,No,No,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
-Laguna,Mehdi,22,190,Contractura psoas izquierdo,Microrrotura psoas izquierdo,1,No,0,0,0,Izdo,Defensa,Natural (plast.),Natural (plast.),1,0
-Laguna,Sergio Gimenez,20,174,Fx despl. maleolo tibial dcho,No,0,Rad/cúbito y maleolo,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
-Laguna,Pulpo,21,183,Rotura 7-8cm cuadriceps dcho,No,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
-Laguna,Lentini,22,175,No,Isquiotibial izquierdo,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
-Laguna,Dani Hdez,21,170,Rotura cuádriceps,Esguince tobillo,1,No,0,0,0,Dcho,Mediocentro,Natural (plast.),Natural (plast.),1,0
-Laguna,Pecos,21,178,"""Corte"" menisco izquierdo",No,0,No,0,0,0,Dcho,Mediocentro,Natural (plast.),Natural (plast.),1,0
-Laguna,Ale Matias,23,178,"Lesión tibial izquierdo, leve",No,0,Septoplastia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,0
-Laguna,Mariano,20,175,Fx primer dedo de la mano,No,0,Fx dedo,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
-Laguna,Gianluca C.,20,176,Isquiotibiales,Calcáneo,1,Fx de tibia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,1
-Laguna,Ignacio Moya,30,180,Rotura cuadriceps dcho,No,0,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,0,0
-Laguna,Néstor,20,179,LLE rodilla izquierda,No,0,No,0,0,0,Izdo,Delantero,Natural (plast.),Natural (plast.),1,1
-Laguna,Joel Gonzalez,21,190,Dos roturas LCP,No,0,LCP dcho y menisco,0,1,0,Dcho,Defensa,Multitacos,Multitacos,1,0
+Padre Anchieta,Luis Pastor,22,181, Fx Clavícula-Clavícula-HOMBRO ; Esguince Tobillo-Tobillo-PIE ; Esguince Tobillo-Tobillo-PIE ; Micr. Recto Anterior-Cuádriceps-MUSLO,Esguince de tobillo-Tobillo-PIE ; Tenosinovitis-Rodilla-PIERNA,2,Hernia inguinal,0,0,1,Dcho,Delantero,Artificial med.,Artificial med.,1,0
+Padre Anchieta,Eduardo,22,185,Molestias Psoas-Psoas-CADERA,Microrrotura isquiotibiales-Isquiosurales-MUSLO,1,No,0,0,0,Izdo,Mediocentro,Multitacos,Multitacos,1,0
+Padre Anchieta,Alberto Brito,20,180,Luxación Hombro-Hombro-HOMBRO,Sobrecarga péctineo-Adductores-MUSLO,1,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
+Padre Anchieta,Omar,26,175,No-Sin lesión,No-Sin lesión,0,No,0,0,1,Dcho,Defensa,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Keyber,21,170,Esguince tobillo derecho grado 1-Tobillo-PIE,Esguince de tobillo iz-Tobillo-PIE ; Contractura isquio izdo-Isquiosurales-MUSLO,2,No,0,0,0,Dcho,Defensa,Multitacos,Natural (plast.),1,0
+Padre Anchieta,David,22,182,Rotura Cuádriceps-Cuádriceps-MUSLO,Microrrotura Isquiotibial-Isquiosurales-MUSLO,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Menso,23,180,Rotura isquio-Isquiosurales-MUSLO ; Rotura cuadriceps-Cuádriceps-MUSLO ; Esguince tobillo-Tobillo-Pie ; Esguince tobillo-Tobillo-Pie ; Esguince tobillo-Tobillo-Pie ; Esguince tobillo-Tobillo-Pie ; Esguince rodilla grado 1-Rodilla-PIERNA,Microrrotura adductor-Adductores-MUSLO,1,No,0,0,1,Izdo,Mediocentro,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Luis Martín,25,160,No-Sin lesión,Sobrecarga gemelo-Gemelos-PIERNA,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
+Padre Anchieta,Vicente,22,192,No-Sin lesión,Rotura isquio-Isquiosurales-MUSLO ; Rotura cuadriceps-Cuádriceps-MUSLO,2,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
+Padre Anchieta,Diego,21,176,Rotura LCA-Rodilla-PIERNA ; Esguince tobillo-Tobillo-PIE,No-Sin lesión,0,Rec. Lig. Cruz.,0,1,0,Dcho,Delantero,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Adri,18,174,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Miguel,20,186,Sí,Fx. muñeca-Muñeca-MANO ; Fx meñique-Dedos-MANO,2,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Asier,25,180,Lumbalgia-Lumbar-TRONCO,No-Sin lesión,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Jose,18,174,No-Sin lesión,Esguince-Tobillo-PIE,1,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Fernando,21,177,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
+Padre Anchieta,Stefan,20,183,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,0
+Marino,Moises Mendez,21,179,Sobrecarga gemelo-Gemelos-PIERNA,Contusión cuadriceps-Cuádriceps-MUSLO,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
+Marino,Samuel Arbelo,25,185,Problemas pata ganso-Rodilla-PIERNA,Pata de ganso-Rodilla-PIERNA ; Rotura Biceps Femoral-Isquiosurales-MUSLO,2,Labrum,0,0,1,Izdo,Defensa,Artificial med.,Artificial med.,0,0
+Marino,Nebai,23,174,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Izdo,Mediocentro,Natural (plast.),Natural (plast.),1,1
+Marino,Aday,21,183,Despl. maleolo y rotula-Rodilla-PIERNA ; Esguince 2º grado-Tobillo-PIE,Desplazamiento rotula-Rodilla-PIERNA ; Rotura gemelo-Gemelos-PIERNA ; Rotura BF-Isquiosurales-MUSLO,3,No,0,0,0,Izdo,Defensa,Artificial med.,Artificial med.,1,1
+Marino,Guille,18,175,No-Sin lesión,No-Sin lesión,0,No,0,0,1,Dcho,Portero,Natural (plast.),Natural (plast.),0,0
+Marino,Facu Valiente,25,180,Luxación músculos peroneos tobillo dcho-Peroneos-PIERNA,No-Sin lesión,0,Tend. peroneos dcho,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,1,0
+Marino,Sergio Glez,23,183,No-Sin lesión,No-Sin lesión,0,No,0,1,0,Izdo,Portero,Natural (plast.),Natural (plast.),1,1
+Marino,Nami,26,180,Fx cubito radio-Muñeca-ANTEBRAZO ; Contractura gemelo-Gemelos-PIERNA ; Contractura isquio-Isquiosurales-MUSLO,Contractura gemelo-Gemelos-PIERNA ; Contractura sóleo-Sóleo-PIERNA ; Rotura isquio-Isquiosurales-MUSLO,3,Cubito radio,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,1
+Marino,Jonny,23,178,No-Sin lesión,Tendinitis rotuliana-Rodilla-PIERNA,1,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,0
+Marino,Aitor,23,185,Rotura isquio-Isquiosurales-MUSLO ; Rotura cuadriceps-Cuádriceps-MUSLO ; Esguince rodilla-Rodilla-PIERNA,No-Sin lesión,0,No,0,0,0,Dcho,Defensa,Natural (plast.),Natural (plast.),0,0
+Marino,Javi Saavedra,27,185,No-Sin lesión,Esguince tobillo leve-Tobillo-PIE,1,No,0,0,0,Izdo,Defensa,Natural (plast.),Natural (plast.),1,1
+Marino,Victor,29,188,Esguince tobillo-Tobillo-PIE ; hernia inguinal ambos lados-Ingle-CADERA ; fx costilla-Costillas-TÓRAX,Esguince tobillo-Tobillo-PIE,1,Tibia perone/hernias,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,1
+Marino,Vidal,27,192,Menisco interno rodilla izquierda-Rodilla-PIERNA,Problemas add-Adductores-MUSLO ; Rot BF-Isquiosurales-MUSLO,2,Menisco int rod iz.,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
+Marino,Jurgen,22,180,No-Sin lesión,No-Sin lesión,0,No,0,1,0,Dcho,Mediocentro,Artificial med.,Artificial med.,1,1
+Marino,Dani Reyes,21,173,Esguince ambos-Tobillo-PIERNA ; Esguince ambos-Tobillo-PIERNA ; Rotura semim.-Isquiosurales-MUSLO ; Rotura semit dcho-Isquiosurales-MUSLO ; Problema gluteo-Glúteo-CADERA,Esguince tobillos-Tobillo-PIE ; Esguince tobillos-Tobillo-PIE ; Esguince tobillos-Tobillo-PIE,2,No,0,0,0,Izdo,Mediocentro,Artificial med.,Artificial med.,0,0
+Marino,Adjona,19,178,No-Sin lesión,Esguince tobillo derecho-Tobillo-PIE,1,No,0,0,0,Dcho,Mediocentro,Multitacos,Multitacos,1,0
+Marino,Espi,21,179,Fisura cubito-Muñeca-ANTEBRAZO ; Fisura perone-Peroné-PIERNA,Fisura perone-Peroné-PIE,1,No,0,0,0,Dcho,Portero,Natural (plast.),Natural (plast.),0,0
+Marino,Andres,19,180,Fisura perone-Peroné-PIERNA,Problemas adductor-Adductores-MUSLO,1,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,1,1
+Marino,Freddy,24,179,No-Sin lesión,Rotura BF-Isquiosurales-MUSLO ; Problemas pectíneo-Adductores-MUSLO,1,No,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
+Marino,Alberto,24,190,"Esguinces tobillo grado 1,2 y 3-Tobillo-PIE ; Esguinces tobillo grado 1,2 y 3-Tobillo-PIE ; Esguinces tobillo grado 1,2 y 3-Tobillo-PIE",Esguinces de tobillo-Tobillo-PIE,1,No,0,0,0,Dcho,Mediocentro,Artificial med.,Artificial med.,0,0
+Laguna,Alonso,20,186,Esguince rodilla izquierda-Rodilla-PIERNA,No-Sin lesión,0,No,0,0,0,Izdo,Portero,Artificial med.,Artificial med.,1,1
+Laguna,Alejandro Magdalena,20,185,Rotura LLI-Rodilla-PIERNA,No-Sin lesión,0,No,0,0,0,Dcho,Portero,Artificial med.,Artificial med.,0,0
+Laguna,Samu ,22,171,No-Sin lesión,No-Sin lesión,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,0,0
+Laguna,Mehdi,22,190,Contractura psoas izquierdo-Psoas-CADERA,Microrrotura psoas izquierdo-Psoas-CADERA,1,No,0,0,0,Izdo,Defensa,Natural (plast.),Natural (plast.),1,0
+Laguna,Sergio Gimenez,20,174,Fx despl. maleolo tibial dcho-Tobillo-PIE,No-Sin lesión,0,Rad/cúbito y maleolo,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
+Laguna,Pulpo,21,183,Rotura 7-8cm cuadriceps dcho-Cuádriceps-MUSLO,No-Sin lesión,0,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
+Laguna,Lentini,22,175,No-Sin lesión,Isquiotibial izquierdo-Isquiosurales-MUSLO,1,No,0,0,0,Dcho,Defensa,Artificial med.,Artificial med.,1,0
+Laguna,Dani Hdez,21,170,Rotura cuádriceps-Cuádriceps-MUSLO,Esguince tobillo-Tobillo-PIE,1,No,0,0,0,Dcho,Mediocentro,Natural (plast.),Natural (plast.),1,0
+Laguna,Pecos,21,178,"""Corte"" menisco izquierdo-Rodilla-PIERNA",No-Sin lesión,0,No,0,0,0,Dcho,Mediocentro,Natural (plast.),Natural (plast.),1,0
+Laguna,Ale Matias,23,178,"Lesión tibial izquierdo, leve-Tibia-PIERNA",No-Sin lesión,0,Septoplastia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,0
+Laguna,Mariano,20,175,Fx primer dedo de la mano-Dedos-MANO,No-Sin lesión,0,Fx dedo,0,0,0,Izdo,Delantero,Artificial med.,Artificial med.,1,0
+Laguna,Gianluca C.,20,176,Isquiotibiales-Isquiosurales-PIERNA,Calcáneo-Talón-PIE,1,Fx de tibia,0,0,0,Dcho,Delantero,Natural (plast.),Natural (plast.),1,1
+Laguna,Ignacio Moya,30,180,Rotura cuadriceps dcho-Cuádriceps-MUSLO,No-Sin lesión,0,No,0,0,0,Dcho,Delantero,Artificial med.,Artificial med.,0,0
+Laguna,Néstor,20,179,LLE rodilla izquierda-Rodilla-PIERNA,No-Sin lesión,0,No,0,0,0,Izdo,Delantero,Natural (plast.),Natural (plast.),1,1
+Laguna,Joel Gonzalez,21,190,Rotura LCP-Rodilla-PIERNA ; Rotura LCP-Rodilla-PIERNA,No-Sin lesión,0,LCP dcho y menisco,0,1,0,Dcho,Defensa,Multitacos,Multitacos,1,0
