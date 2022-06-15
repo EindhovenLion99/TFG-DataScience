@@ -1,33 +1,24 @@
 # %%
 import DataFunctions as getdata
+import plotFunctions as getplot
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+
+# %%
 jugadores, f_riesgo = getdata.read_data('.')
+#completeTable = getdata.combineData2Excel(jugadores, f_riesgo)
 
 # %%
-equipo = "Laguna"
-jugadores_equipo = jugadores.loc[jugadores['Equipo'] == equipo].sort_values(['Edad'])
-ax_1 = jugadores_equipo.plot.bar(figsize=(15,10), x = 'Jugador', y = 'Edad', xlabel="Jugadores")
-ax_1.set_yticks(np.arange(0, max(jugadores_equipo['Edad']) + 2, 1))
-
+getplot.plotEdadesJugadores("Laguna", jugadores)
+getplot.plotEdadesJugadores("Padre Anchieta", jugadores)
+getplot.plotEdadesJugadores("Marino", jugadores)
 
 # %%
-team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones'].sort_values()
-pl_mean = team_total_injuries.mean()
-ax_2 = team_total_injuries.plot(kind = "barh")
-ax_2.set_xticks(np.arange(0, max(team_total_injuries) + 2, 2))
-ax_2.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
-ax_2.axvline(pl_mean, ls="--", color='r')
+getplot.plotNumLesionesPorEquipo(jugadores)
 
 # %%
-pl = jugadores.groupby(['Equipo', 'Posición']).sum()['Total Lesiones'].unstack()
-pl = pl.fillna(0)
-ax_3 = pl.plot(figsize=(14, 5), kind = "barh", stacked = True)
-ax_3.set_xticks(np.arange(0, max(team_total_injuries) + 2, 2))
-ax_3.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
-ax_3.axvline(pl_mean, ls="--", color='r')
-
+getplot.plotNumLesionesPorEquipoAgrupadas(jugadores)
 
 # %%
 lesiones = {
@@ -81,21 +72,8 @@ lesiones = {
   }
 }
 
-# %%
-lesiones_previas = jugadores['Lesiones Previas']
-for row in lesiones_previas:
-  if " ; " in row:
-    row_array = row.split(" ; ")
-    for a in row_array:
-      elems = a.split('-')
-      if elems[2].capitalize() in lesiones.keys():
-        lesiones[elems[2].capitalize()]['Cantidad'] += 1
-  elif row != 'No-Sin lesión':
-    elems = row.split('-')
-    if elems[2].capitalize() in lesiones.keys():
-      lesiones[elems[2].capitalize()]['Cantidad'] += 1
-
-lesiones
-
 
 # %%
+lesiones_previas = getdata.getInjuriesTable(jugadores)
+lesiones_previas
+
