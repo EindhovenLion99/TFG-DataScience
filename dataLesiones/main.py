@@ -16,11 +16,9 @@ getplot.plotEdadesJugadores("Marino", jugadores)
 
 # %%
 getplot.plotNumLesionesPorEquipo(jugadores)
-
-# %%
 getplot.plotNumLesionesPorEquipoAgrupadas(jugadores)
 
 # %%
-lesiones_previas = getdata.getInjuriesTable(jugadores)
-lesiones_previas
+lesiones_previas = getdata.getInjuriesTable(jugadores, 'Lesiones Actuales')
+getplot.plotInjuriesType(lesiones_previas)
 

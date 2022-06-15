@@ -23,10 +23,10 @@ def combineData2Excel(jugadores, f_riesgo):
   completeTable.to_excel('TablaCompelta.xlsx')
   return combinedTables
 
-def getInjuriesTable(jugadores):
-  lesiones_previas = jugadores[['Equipo', 'Edad', 'Altura', 'Lesiones Previas']]
-  lesiones_previas['Vector Lesiones'] = lesiones_previas['Lesiones Previas'].str.split(" ; ")
+def getInjuriesTable(jugadores, periodo_lesion):
+  lesiones_previas = jugadores[['Equipo', 'Edad', 'Altura', periodo_lesion]]
+  lesiones_previas['Vector Lesiones'] = lesiones_previas[periodo_lesion].str.split(" ; ")
   lesiones_previas = lesiones_previas.explode('Vector Lesiones')
-  lesiones_previas = lesiones_previas.drop(columns=['Lesiones Previas'])
+  lesiones_previas = lesiones_previas.drop(columns=[periodo_lesion])
   return lesiones_previas
 
