@@ -8,7 +8,6 @@ def read_data(DATADIR):
   jugadores = read_csv_file(file)
   f_riesgo = read_csv_file(file2)
   jugadores = jugadores.set_index('Jugador')
-  f_riesgo = f_riesgo.set_index('Jugador')
   return jugadores, f_riesgo
 
 
@@ -29,4 +28,23 @@ def getInjuriesTable(jugadores, periodo_lesion):
   lesiones_previas = lesiones_previas.explode('Vector Lesiones')
   lesiones_previas = lesiones_previas.drop(columns=[periodo_lesion])
   return lesiones_previas
+
+def compareInjuriesWith(jugadores, parameter='Preparación'):
+  if parameter == 'Operaciones':
+    jugadores_preparacion = jugadores.loc[jugadores['Operaciones'] != 'No'].groupby('Equipo', as_index=False)[parameter].count()
+  else:
+    jugadores_preparacion = jugadores.groupby('Equipo', as_index=False)[parameter].sum()
+  equipos = jugadores.groupby('Equipo', as_index=False)['Edad'].sum()
+  juagdores_total = jugadores.groupby('Equipo', as_index=False).count()
+  jugadores_lesionados = jugadores.loc[jugadores['Total Lesiones'] > 0].groupby('Equipo', as_index=False).count()
+  
+
+  new_data = pd.DataFrame()
+  new_data['Equipo'] = equipos['Equipo']
+  new_data['Total de Jugadores'] = juagdores_total['Total Lesiones']
+  new_data['Jugadores Lesionados'] = jugadores_lesionados['Total Lesiones']
+  new_string = 'Jugadores con ' + parameter
+  new_data[new_string] = jugadores_preparacion[parameter]
+  new_data = new_data.set_index('Equipo')
+  return new_data
 

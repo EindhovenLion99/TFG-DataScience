@@ -26,12 +26,39 @@ def plotNumLesionesPorEquipoAgrupadas(jugadores):
   ax_3.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
   ax_3.axvline(pl_mean, ls="--", color='r')
 
-def plotInjuriesType(lesiones):
+def plotInjuriesType(lesiones, tipo, figsize=(10,8), kind='bar'):
   lesiones['Grupo Muscular'] = lesiones['Vector Lesiones'].str.split('-').str[-1]
   lesiones['Parte'] = lesiones['Vector Lesiones'].str.split('-').str[1]
   lesiones['Lesion'] = lesiones['Vector Lesiones'].str.split('-').str[0]
   lesiones = lesiones.drop(lesiones[lesiones.Lesion == 'No'].index)
 
-  lesiones = lesiones.groupby('Grupo Muscular')['Lesion'].count()
-  ax_4 = lesiones.plot(legend=False, kind='bar')
-  ax_4.set_yticks(np.arange(0, max(lesiones) + 2, 2))
+  lesiones = lesiones.groupby(tipo)['Lesion'].count()
+  ax_4 = lesiones.plot(legend=False, kind=kind, figsize=figsize)
+  if (kind == 'barh'):
+    ax_4.set_xticks(np.arange(0, max(lesiones) + 2, 2))
+  else:
+    ax_4.set_yticks(np.arange(0, max(lesiones) + 2, 2))
+
+
+def plotCompareWith(data, figsize=(10,8)):
+  ax_5 = data.plot(kind='bar', figsize=figsize)
+  ax_5.set_yticks(np.arange(0, max(data['Total de Jugadores']) + 2, 2))
+  for container in ax_5.containers:
+    ax_5.bar_label(container)
+
+
+def plotFactorRiesgo(f_riesgo, factor, tipo=False):
+  if tipo:
+    jugadores = f_riesgo.loc[f_riesgo[factor] == tipo, ['Jugador', 'Equipo']]
+  else:
+    jugadores = f_riesgo.loc[f_riesgo[factor] != "No", ['Jugador', 'Equipo', factor]]
+  print(jugadores)
+  f_ = f_riesgo[factor].value_counts()
+  f_.plot(kind='bar')
+
+def plotFactorRiesgoCombinado(f_riesgo, factores, tipos):
+  print(factores)
+  print(tipos)
+  if tipos:
+    jugadores = f_riesgo.loc[(f_riesgo[factores[0]] == tipos[0]) & (f_riesgo[factores[1]] == tipos[1]), ['Jugador', 'Equipo', factores[0], factores[1]]]
+  print(jugadores)
