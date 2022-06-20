@@ -9,13 +9,16 @@ import matplotlib.animation as animation
 
 def plot_events(events, figax = None, indicators = ['Marker','Arrow'], 
                 color = 'r', marker_style = 'o', alpha = 0.5, annotate = False):      # Dibuja el campo
-
   if figax is None:
     fig, ax = plot_field()
   else:
     fig, ax = figax
   for i, row in events.iterrows():
     if 'Marker' in indicators:
+      if row['Team'] == "Home":
+        color = "r"
+      else:
+        color = 'b'
       ax.plot(row['Start X'], row['Start Y'], color + marker_style, alpha = alpha)
     if 'Arrow' in indicators:
       ax.annotate("", xy = row[['End X','End Y']], xytext = row[['Start X','Start Y']], 

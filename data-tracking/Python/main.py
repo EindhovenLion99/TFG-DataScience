@@ -13,12 +13,8 @@ home, away, events = getdata.read_match_data(2, dir)
 home
 # %%
 getstats.plotTeamPosesion(events)
-# %%
 getplot.plot_frame(home.iloc[2891], away.iloc[2891], annotate=True, velocity=True)
 
-
-# %%
-getplot.plot_type_distance_covered(home, 'home')
 
 # %%
 goals = events.loc[events['Subtype'].str.contains('TARGET-GOAL', na=False)]
@@ -29,7 +25,17 @@ getplot.clip(home.loc[START_FRAME:END_FRAME], away.loc[START_FRAME:END_FRAME], p
 
 # %%
 getplot.plot_minutes_played(home, 'home')
-
+getplot.plot_minutes_played(away, 'away')
+getplot.plot_type_distance_covered(home, 'home')
 
 # %%
-getplot.plot_minutes_played(away, 'away')
+shots = events[events['Type'] == 'SHOT']
+goals = shots[shots['Subtype'].str.contains('-GOAL')].copy()
+
+
+getplot.plot_events(events.loc[goals.index[1] - 3 : goals.index[1]], annotate=True)
+
+
+#getplot.plot_events(goals)
+
+# %%

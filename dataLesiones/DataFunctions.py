@@ -19,14 +19,18 @@ def combineData2Excel(jugadores, f_riesgo):
   combinedTables = pd.merge(jugadores, f_riesgo, left_index=True, right_index=True)
   completeTable = combinedTables.drop(columns=['Equipo_y'])
   completeTable.columns = completeTable.columns.str.replace('_x', '')
-  completeTable.to_excel('TablaCompelta.xlsx')
+  #completeTable.to_excel('TablaCompelta.xlsx')
   return combinedTables
 
 def getInjuriesTable(jugadores, periodo_lesion):
   lesiones_previas = jugadores[['Equipo', 'Edad', 'Altura', periodo_lesion]]
   lesiones_previas['Vector Lesiones'] = lesiones_previas[periodo_lesion].str.split(" ; ")
   lesiones_previas = lesiones_previas.explode('Vector Lesiones')
+  lesiones_previas['Lesion'] = lesiones_previas['Vector Lesiones'].str.split("-").str[0]
+  lesiones_previas['Parte'] = lesiones_previas['Vector Lesiones'].str.split("-").str[1]
+  lesiones_previas['Grupo Muscular'] = lesiones_previas['Vector Lesiones'].str.split("-").str[-1]
   lesiones_previas = lesiones_previas.drop(columns=[periodo_lesion])
+  lesiones_previas = lesiones_previas.drop(columns=['Vector Lesiones'])
   return lesiones_previas
 
 def compareInjuriesWith(jugadores, parameter='Preparación'):

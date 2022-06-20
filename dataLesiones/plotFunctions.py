@@ -26,6 +26,10 @@ def plotNumLesionesPorEquipoAgrupadas(jugadores):
   ax_3.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
   ax_3.axvline(pl_mean, ls="--", color='r')
 
+def plotLesionFactor(jugadores, tipo, factor, figsize):
+  pl = jugadores.groupby([tipo, factor])[factor].count().unstack()
+  ax_ = pl.plot(figsize=figsize, kind = "barh", stacked = True)
+
 def plotInjuriesType(lesiones, tipo, figsize=(10,8), kind='bar'):
   lesiones['Grupo Muscular'] = lesiones['Vector Lesiones'].str.split('-').str[-1]
   lesiones['Parte'] = lesiones['Vector Lesiones'].str.split('-').str[1]
@@ -57,8 +61,15 @@ def plotFactorRiesgo(f_riesgo, factor, tipo=False):
   f_.plot(kind='bar')
 
 def plotFactorRiesgoCombinado(f_riesgo, factores, tipos):
-  print(factores)
-  print(tipos)
   if tipos:
     jugadores = f_riesgo.loc[(f_riesgo[factores[0]] == tipos[0]) & (f_riesgo[factores[1]] == tipos[1]), ['Jugador', 'Equipo', factores[0], factores[1]]]
   print(jugadores)
+
+def plotCorrelatividad(jugadores, var1, var2):
+  f = plt.figure(figsize=(19,15))
+  plt.matshow(jugadores.corr(), fignum=f.number)
+  plt.xticks(np.arange(min(jugadores['Edad']), max(jugadores['Edad']), 1), fontsize=14, rotation=45)
+  plt.yticks(np.arange(min(jugadores['Total Lesiones']), max(jugadores['Total Lesiones']), 1), fontsize=14)
+  cb = plt.colorbar()
+  cb.ax.tick_params(labelsize=14)
+  plt.title('Correlation Matriz', fontsize=16);

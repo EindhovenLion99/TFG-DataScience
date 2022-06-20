@@ -7,7 +7,7 @@ import pandas as pd
 
 # %%
 jugadores, f_riesgo = getdata.read_data('.')
-#completeTable = getdata.combineData2Excel(jugadores, f_riesgo)
+completeTable = getdata.combineData2Excel(jugadores, f_riesgo)
 
 # %%
 getplot.plotEdadesJugadores("Laguna", jugadores)
@@ -19,9 +19,9 @@ getplot.plotNumLesionesPorEquipo(jugadores)
 getplot.plotNumLesionesPorEquipoAgrupadas(jugadores)
 
 # %%
-lesiones_previas = getdata.getInjuriesTable(jugadores, 'Lesiones Actuales')
-getplot.plotInjuriesType(lesiones_previas, 'Lesion', figsize=(10,15), kind='barh')
-
+lesiones_previas = getdata.getInjuriesTable(jugadores, 'Lesiones Previas')
+lesiones_previas
+#getplot.plotInjuriesType(lesiones_previas, 'Grupo Muscular', figsize=(10,15), kind='barh')
 
 # %%
 lesion_preparacion = getdata.compareInjuriesWith(jugadores, 'Preparación')
@@ -42,4 +42,16 @@ getplot.plotFactorRiesgo(f_riesgo, 'GL. MEDIO')
 
 # %%
 getplot.plotFactorRiesgoCombinado(f_riesgo, ['V/V CALCÁNEO', 'GL. MEDIO'], ['Valgo ambos', 'Izquierdo'])
+
+# %%
+jugadores.corr()
+f_riesgo.corr()
+
+# %%
+f_riesgo_index = f_riesgo.set_index('Jugador')
+
+#%%
+data = getdata.combineData2Excel(lesiones_previas, f_riesgo_index)
+getplot.plotLesionFactor(data, 'Lesion', 'V/V RODILLA', figsize=(10,20))
+
 # %%
