@@ -4,6 +4,7 @@
 import DataFunctions as getdata
 import PlotFunctions as getplot
 import Statistics as getstats
+import PitchControl as getpitchcontrol
 dir = '../../NewNames'
 
 # %% -- Lectura de los datos
@@ -35,7 +36,5 @@ goals = shots[shots['Subtype'].str.contains('-GOAL')].copy()
 
 getplot.plot_events(events.loc[goals.index[1] - 3 : goals.index[1]], annotate=True)
 
-
-#getplot.plot_events(goals)
-
 # %%
+params = getpitchcontrol.default_params()
