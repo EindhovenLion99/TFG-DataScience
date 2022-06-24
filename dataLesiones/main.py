@@ -52,6 +52,4 @@ f_riesgo_index = f_riesgo.set_index('Jugador')
 
 #%%
 data = getdata.combineData2Excel(lesiones_previas, f_riesgo_index)
-getplot.plotLesionFactor(data, 'Lesion', 'V/V RODILLA', figsize=(10,20))
-
-# %%
+getplot.plotLesionFactor(data, 'Lesion', 'V/V CALCÁNEO', figsize=(10,20))
