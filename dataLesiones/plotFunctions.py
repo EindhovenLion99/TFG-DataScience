@@ -59,7 +59,8 @@ def plotFactorRiesgo(f_riesgo, factor, tipo=False):
   print(jugadores)
   f_ = f_riesgo[factor].value_counts()
   ax = f_.plot(kind='bar')
-  ax.bar_label(ax.containers[0])
+  for container in ax.containers:
+    ax.bar_label(container)
 
 def plotFactorRiesgoCombinado(f_riesgo, factores, tipos):
   if tipos:
