@@ -26,7 +26,10 @@ def plotNumLesionesPorEquipoAgrupadas(jugadores):
   ax_3.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
   ax_3.axvline(pl_mean, ls="--", color='r')
 
-def plotLesionFactor(jugadores, tipo, factor, figsize):
+def plotLesionFactor(jugadores, tipo, factor, figsize, mixed=False):
+  if mixed:
+    #jugadores = jugadores.loc[jugadores[factor] != 'No', factor] = 'Si'
+    jugadores[factor] = ['Si' if valor != 'No' and valor != 'Normal' and valor != 'Neutro' else valor for valor in jugadores[factor]]
   pl = jugadores.groupby([tipo, factor])[factor].count().unstack()
   ax_ = pl.plot(figsize=figsize, kind = "barh", stacked = True)
 

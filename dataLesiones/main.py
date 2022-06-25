@@ -20,7 +20,6 @@ getplot.plotNumLesionesPorEquipoAgrupadas(jugadores)
 
 # %%
 lesiones_previas = getdata.getInjuriesTable(jugadores, 'Lesiones Previas')
-lesiones_previas
 #getplot.plotInjuriesType(lesiones_previas, 'Grupo Muscular', figsize=(10,15), kind='barh')
 
 # %%
@@ -52,4 +51,6 @@ f_riesgo_index = f_riesgo.set_index('Jugador')
 
 #%%
 data = getdata.combineData2Excel(lesiones_previas, f_riesgo_index)
-getplot.plotLesionFactor(data, 'Lesion', 'V/V CALCÁNEO', figsize=(10,20))
+getplot.plotLesionFactor(data, 'Parte', 'Sprint', figsize=(10,20))
+
+# %%
