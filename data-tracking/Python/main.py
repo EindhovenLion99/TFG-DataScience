@@ -34,7 +34,13 @@ shots = events[events['Type'] == 'SHOT']
 goals = shots[shots['Subtype'].str.contains('-GOAL')].copy()
 
 
-getplot.plot_events(events.loc[goals.index[1] - 3 : goals.index[1]], annotate=True)
+getplot.plot_events(events.loc[820:823], annotate=True)
+
+# %%
+getplot.plot_frame(home.iloc[820], away.iloc[820])
 
 # %%
 params = getpitchcontrol.default_params()
+
+PPCF, xgrid, ygrid = getpitchcontrol.generate_pitch_control(820, events, home, away, params, n_grid_cells_x=50)
+# %%

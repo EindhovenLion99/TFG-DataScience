@@ -40,11 +40,11 @@ def generate_pitch_control(event_id, events, home, away, params, n_grid_cells_x=
   PPCFd = np.zeros(shape = (len(ygrid), len(xgrid)))
 
   if team == 'Home':
-    attacking_players = initialize_players(home.loc[frame], 'Home', params)
-    defending_players = initialize_players(home.loc[frame], 'Away', params)
+    attacking_players = initialise_players(home.loc[frame], 'home', params)
+    defending_players = initialise_players(away.loc[frame], 'away', params)
   elif team == 'Away':
-    attacking_players = initialize_players(home.loc[frame], 'Away', params)
-    defending_players = initialize_players(home.loc[frame], 'Home', params)
+    attacking_players = initialise_players(away.loc[frame], 'away', params)
+    defending_players = initialise_players(home.loc[frame], 'home', params)
 
   for i in range(len(ygrid)):
     for j in range(len(xgrid)):
@@ -52,16 +52,24 @@ def generate_pitch_control(event_id, events, home, away, params, n_grid_cells_x=
       PPCFa[i, j], PPCFd[i, j] = calculate_pitch_control_target(target, attacking_players, defending_players, ball_pos, params)
 
   checksum = np.sum(PPCFa + PPCFd) / float(n_grid_cells_x * n_grid_cells_y)
-  assert 1 - checksum < params['model_converge_tol'], "Checksum Failed: %1.3f" % (1-checksum)
+  #assert 1 - checksum < params['model_converge_tol'], "Checksum Failed: %1.3f" % (1-checksum)
   return PPCFa, xgrid, ygrid
 
+def initialise_players(team, teamname, params):
+  player_ids = np.unique([c.split('_')[1] for c in team.keys() if c[:4] == teamname])
+  team_players = []
+  for p in player_ids:
+    team_player = Player(p, team, teamname, params)
+    if team_player.inframe:
+      team_players.append(team_player)
+  return team_players
 
 class Player(object):
 
   def __init__(self, pid, team, teamname, params):
     self.id = pid
     self.teamname = teamname
-    self.playername = "%s_%s_" % (team, pid)
+    self.playername = "%s_%s_" % (teamname, pid)
     self.vmax = params['PlayerMaxSpd']
     self.reaction_time = params['PlayerReactTime']
     self.tti_sigma = params['sigma']
@@ -79,13 +87,13 @@ class Player(object):
       self.velocity = np.array([0., 0.])
 
   def simple_time_to_intercept(self, r_final):
-    self.PPCF = 0
+    self.PPCF = 0.
     r_reaction = self.position + self.velocity * self.reaction_time
     self.time_to_intercept = self.reaction_time + np.linalg.norm(r_final - r_reaction) / self.vmax
     return self.time_to_intercept
 
-  def probability_intercept(self, T):
-    f = 1 / (1. + np.exp(-np.pi / np.sqrt(3.0) / self.tti_sigma * (T - self.time_to_intercept) ) )
+  def probability_intercept_ball(self, T, s=0.45):
+    f = 1 / (1. + np.exp(-np.pi / np.sqrt(3.0) / s * (T - self.time_to_intercept) ) )
     return f
 
 def calculate_pitch_control_target(target_position, attacking_players, defending_players, ball_pos, params):
@@ -102,5 +110,34 @@ def calculate_pitch_control_target(target_position, attacking_players, defending
   elif tau_min_def - max(ball_travel_time, tau_min_att) >= params['TimeToControlAtt']:
     return 1., 0.
   else:
+
+    attacking_players = [p for p in attacking_players if p.time_to_intercept - tau_min_att < params['TimeToControlAtt']]
+    defending_players = [p for p in defending_players if p.time_to_intercept - tau_min_def < params['TimeToControlDef']]
+
+    dT_array = np.arange(ball_travel_time - params['int_dt'], ball_travel_time + params['max_int_time'], params['int_dt'])
+    PPCFatt = np.zeros_like(dT_array)
+    PPCFdef = np.zeros_like(dT_array)
+
+    ptot = 0.0
+    i = 1
+
+    while 1 - ptot > params['model_converge_tol'] and i < dT_array.size:
+      T = dT_array[i]
+      for player in attacking_players:
+        dPPCFdt = (1 - PPCFatt[i-1] - PPCFdef[i-1]) * player.probability_intercept_ball(T, s=params['sigma']) * params['LambdaAtt']
+        assert dPPCFdt >= 0, 'Invalid probability'
+        player.PPCF += dPPCFdt * params['int_dt']
+        PPCFatt[i] += player.PPCF
+      for player in defending_players:
+        dPPCFdt = (1 - PPCFatt[i-1] - PPCFdef[i-1]) * player.probability_intercept_ball(T, s=params['sigma']) * params['LambdaDef']
+        assert dPPCFdt >= 0, 'Invalid probability'
+        player.PPCF += dPPCFdt * params['int_dt']
+        PPCFdef[i] += player.PPCF
+      ptot = PPCFdef[i] + PPCFatt[i]
+      i += 1
     
+    if i >= dT_array.size:
+      print("Integration failed to converge: %1.3f - %1.3f - %1.3f" % (ptot, i, dT_array.size))
+    return PPCFatt[i-1], PPCFdef[i-1]
+
 
