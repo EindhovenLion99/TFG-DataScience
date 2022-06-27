@@ -32,6 +32,9 @@ def plotLesionFactor(jugadores, tipo, factor, figsize, mixed=False):
     jugadores[factor] = ['Si' if valor != 'No' and valor != 'Normal' and valor != 'Neutro' else valor for valor in jugadores[factor]]
   pl = jugadores.groupby([tipo, factor])[factor].count().unstack()
   ax_ = pl.plot(figsize=figsize, kind = "barh", stacked = True)
+  for c in ax_.containers:
+    labels = [int(v.get_width()) if v.get_width() > 0 else '' for v in c]
+    ax_.bar_label(c, labels=labels, label_type='center')
 
 def plotInjuriesType(lesiones, tipo, figsize=(10,8), kind='bar'):
   lesiones['Grupo Muscular'] = lesiones['Vector Lesiones'].str.split('-').str[-1]
@@ -45,6 +48,8 @@ def plotInjuriesType(lesiones, tipo, figsize=(10,8), kind='bar'):
     ax_4.set_xticks(np.arange(0, max(lesiones) + 2, 2))
   else:
     ax_4.set_yticks(np.arange(0, max(lesiones) + 2, 2))
+  for container in ax_4.containers:
+    ax_4.bar_label(container)
 
 
 def plotCompareWith(data, figsize=(10,8)):
@@ -65,10 +70,29 @@ def plotFactorRiesgo(f_riesgo, factor, tipo=False):
   for container in ax.containers:
     ax.bar_label(container)
 
-def plotFactorRiesgoCombinado(f_riesgo, factores, tipos):
-  if tipos:
-    jugadores = f_riesgo.loc[(f_riesgo[factores[0]] == tipos[0]) & (f_riesgo[factores[1]] == tipos[1]), ['Jugador', 'Equipo', factores[0], factores[1]]]
-  print(jugadores)
+
+def label_race(row, factores):
+  count = 0
+  for fact in factores:
+    if row[fact] == 'Si':
+      count += 1
+  if count == len(factores):
+    return 'Si'
+  else:
+    return 'No'
+
+def plotFactorRiesgoCombinado(jugadores, factores, zona, figsize=(10,15)):
+  new_string = ""
+  for factor in factores:
+    new_string += factor + " "
+    jugadores[factor] = ['Si' if valor != 'No' and valor != 'Normal' and valor != 'Neutro' else valor for valor in jugadores[factor]]
+  jugadores[new_string] = jugadores.apply(lambda row: label_race(row, factores), axis=1)
+  pl = jugadores.groupby([zona, new_string])[new_string].count().unstack()
+  ax_ = pl.plot(figsize=figsize, kind = "barh", stacked = True)
+  for c in ax_.containers:
+    labels = [int(v.get_width()) if v.get_width() > 0 else '' for v in c]
+    ax_.bar_label(c, labels=labels, label_type='center')
+  
 
 def plotCorrelatividad(jugadores, var1, var2):
   f = plt.figure(figsize=(19,15))

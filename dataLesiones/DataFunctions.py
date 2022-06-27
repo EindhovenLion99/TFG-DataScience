@@ -22,15 +22,20 @@ def combineData2Excel(jugadores, f_riesgo):
   #completeTable.to_excel('TablaCompelta.xlsx')
   return combinedTables
 
-def getInjuriesTable(jugadores, periodo_lesion):
+def label_race(row):
+  return row['Lesiones Previas'] + " ; " + row['Lesiones Actuales']
+
+def getInjuriesTable(jugadores, periodo_lesion, COMBO=False):
   lesiones_previas = jugadores[['Equipo', 'Edad', 'Altura', periodo_lesion]]
+  if COMBO:
+    lesiones_previas = jugadores[['Equipo', 'Edad', 'Altura', periodo_lesion, 'Lesiones Actuales']]
+    lesiones_previas[periodo_lesion] = lesiones_previas.apply(lambda row: label_race(row), axis=1)
   lesiones_previas['Vector Lesiones'] = lesiones_previas[periodo_lesion].str.split(" ; ")
   lesiones_previas = lesiones_previas.explode('Vector Lesiones')
   lesiones_previas['Lesion'] = lesiones_previas['Vector Lesiones'].str.split("-").str[0]
   lesiones_previas['Parte'] = lesiones_previas['Vector Lesiones'].str.split("-").str[1]
   lesiones_previas['Grupo Muscular'] = lesiones_previas['Vector Lesiones'].str.split("-").str[-1]
   lesiones_previas = lesiones_previas.drop(columns=[periodo_lesion])
-  lesiones_previas = lesiones_previas.drop(columns=['Vector Lesiones'])
   return lesiones_previas
 
 def compareInjuriesWith(jugadores, parameter='Preparación'):
