@@ -23,6 +23,7 @@ def combineData2Excel(jugadores, f_riesgo):
   return combinedTables
 
 def label_race(row):
+  print(row['Lesiones Previas'])
   return row['Lesiones Previas'] + " ; " + row['Lesiones Actuales']
 
 def getInjuriesTable(jugadores, periodo_lesion, COMBO=False):

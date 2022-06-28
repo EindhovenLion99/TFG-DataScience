@@ -3,29 +3,33 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def plotEdadesJugadores(equipo, jugadores):
-  jugadores_equipo = jugadores.loc[jugadores['Equipo'] == equipo].sort_values(['Edad'])
-  ax_1 = jugadores_equipo.plot.bar(figsize=(15,10), use_index=True, y = 'Edad', xlabel="Jugadores")
-  ax_1.set_yticks(np.arange(0, max(jugadores_equipo['Edad']) + 2, 1))
+def plotEdadesJugadores(equipo, jugadores, figsize=(10,8)):
 
-def plotNumLesionesPorEquipo(jugadores):
-  team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones Previas'].sort_values()
+  jugadores_equipo = jugadores.loc[jugadores['Equipo'] == equipo].sort_values(['Edad'])
+  ax_1 = jugadores_equipo.plot.barh(figsize=figsize, use_index=True, y = 'Edad', xlabel="Jugadores")
+  ax_1.set_title("Clasificacion de edad del " + equipo)
+  ax_1.set_xticks(np.arange(0, max(jugadores_equipo['Edad']) + 2, 1))
+
+def plotNumLesionesPorEquipo(jugadores, tipo):
+  team_total_injuries = jugadores.groupby(['Equipo']).sum()[tipo].sort_values()
   print(team_total_injuries)
   pl_mean = team_total_injuries.mean()
   ax_2 = team_total_injuries.plot(kind = "barh")
   ax_2.set_xticks(np.arange(0, max(team_total_injuries) + 2, 2))
   ax_2.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
   ax_2.axvline(pl_mean, ls="--", color='r')
+  ax_2.set_title("Lesiones por equipo (" + tipo + ")")
 
-def plotNumLesionesPorEquipoAgrupadas(jugadores):
-  pl = jugadores.groupby(['Equipo', 'Posición']).sum()['Total Lesiones Previas'].unstack()
-  team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones Previas']
+def plotNumLesionesPorEquipoAgrupadas(jugadores, tipo):
+  pl = jugadores.groupby(['Equipo', 'Posición']).sum()[tipo].unstack()
+  team_total_injuries = jugadores.groupby(['Equipo']).sum()[tipo]
   pl_mean = team_total_injuries.mean()
   pl = pl.fillna(0)
   ax_3 = pl.plot(figsize=(14, 5), kind = "barh", stacked = True)
   ax_3.set_xticks(np.arange(0, max(team_total_injuries) + 2, 2))
   ax_3.set(xlabel="Lesiones", title="Numero de lesiones por equipo")
   ax_3.axvline(pl_mean, ls="--", color='r')
+  ax_3.set_title("Lesiones por equipo agrupadas (" + tipo + ")")
 
 def plotLesionFactor(jugadores, tipo, factor, figsize, mixed=False):
   if mixed:
@@ -51,6 +55,7 @@ def plotInjuriesType(lesiones, tipo, figsize=(10,8), kind='bar'):
     ax_4.set_yticks(np.arange(0, max(lesiones) + 2, 2))
   for container in ax_4.containers:
     ax_4.bar_label(container)
+  ax_4.set_title('Numero de lesiones (Lesiones Previas)')
 
 
 def plotCompareWith(data, figsize=(10,8)):
@@ -60,16 +65,17 @@ def plotCompareWith(data, figsize=(10,8)):
     ax_5.bar_label(container)
 
 
-def plotFactorRiesgo(f_riesgo, factor, tipo=False):
+def plotFactorRiesgo(f_riesgo, factor, tipo=False, kind='bar'):
   if tipo:
     jugadores = f_riesgo.loc[f_riesgo[factor] == tipo, ['Jugador', 'Equipo']]
   else:
     jugadores = f_riesgo.loc[f_riesgo[factor] != "No", ['Jugador', 'Equipo', factor]]
   print(jugadores)
   f_ = f_riesgo[factor].value_counts()
-  ax = f_.plot(kind='bar')
+  ax = f_.plot(kind=kind)
   for container in ax.containers:
     ax.bar_label(container)
+  ax.set_title(factor)
 
 
 def label_race(row, factores):

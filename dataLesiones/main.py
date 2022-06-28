@@ -15,11 +15,11 @@ getplot.plotEdadesJugadores("Padre Anchieta", jugadores)
 getplot.plotEdadesJugadores("Marino", jugadores)
 
 # %%
-getplot.plotNumLesionesPorEquipo(jugadores)
-getplot.plotNumLesionesPorEquipoAgrupadas(jugadores)
+getplot.plotNumLesionesPorEquipo(jugadores, 'Total Lesiones Actuales')
+getplot.plotNumLesionesPorEquipoAgrupadas(jugadores, 'Total Lesiones Actuales')
 
 # %%
-getplot.plotInjuriesType(lesiones_actuales, 'Lesion', figsize=(10,10), kind='barh')
+getplot.plotInjuriesType(lesiones_actuales, 'Parte', figsize=(10,10), kind='barh')
 
 # %%
 lesion_preparacion = getdata.compareInjuriesWith(jugadores, 'Preparación')
@@ -38,7 +38,7 @@ getplot.plotCompareWith(lesion_escoliosis, figsize=(15,9))
 
 
 # %%
-lesiones_actuales = getdata.getInjuriesTable(jugadores, 'Lesiones Actuales', COMBO=False)
+lesiones_actuales = getdata.getInjuriesTable(jugadores, 'Lesiones Previas', COMBO=True)
 
 # %%
 f_riesgo_index = f_riesgo.set_index('Jugador')
@@ -60,11 +60,11 @@ getplot.plotFactorRiesgo(f_riesgo, F9)
 
 #%%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
-getplot.plotLesionFactor(data, 'Grupo Muscular', F3, figsize=(8,15))
+getplot.plotLesionFactor(data, 'Parte', F9, figsize=(12,15))
 
 # %%
-data = getdata.combineData2Excel(lesiones_previas, f_riesgo_index)
-getplot.plotFactorRiesgoCombinado(data, [F3, F4, F5], 'Parte')
+data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
+getplot.plotFactorRiesgoCombinado(data, [F9, F8, F7], 'Parte')
 
 
 # %%
