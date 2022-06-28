@@ -9,7 +9,8 @@ def plotEdadesJugadores(equipo, jugadores):
   ax_1.set_yticks(np.arange(0, max(jugadores_equipo['Edad']) + 2, 1))
 
 def plotNumLesionesPorEquipo(jugadores):
-  team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones'].sort_values()
+  team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones Previas'].sort_values()
+  print(team_total_injuries)
   pl_mean = team_total_injuries.mean()
   ax_2 = team_total_injuries.plot(kind = "barh")
   ax_2.set_xticks(np.arange(0, max(team_total_injuries) + 2, 2))
@@ -17,8 +18,8 @@ def plotNumLesionesPorEquipo(jugadores):
   ax_2.axvline(pl_mean, ls="--", color='r')
 
 def plotNumLesionesPorEquipoAgrupadas(jugadores):
-  pl = jugadores.groupby(['Equipo', 'Posición']).sum()['Total Lesiones'].unstack()
-  team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones']
+  pl = jugadores.groupby(['Equipo', 'Posición']).sum()['Total Lesiones Previas'].unstack()
+  team_total_injuries = jugadores.groupby(['Equipo']).sum()['Total Lesiones Previas']
   pl_mean = team_total_injuries.mean()
   pl = pl.fillna(0)
   ax_3 = pl.plot(figsize=(14, 5), kind = "barh", stacked = True)
