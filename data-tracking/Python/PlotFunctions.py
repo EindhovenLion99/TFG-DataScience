@@ -29,8 +29,11 @@ def plot_events(events, figax = None, indicators = ['Marker','Arrow'],
       ax.text( row['Start X'], row['Start Y'], textstring, fontsize=10, color = color)
   return fig, ax
 
-def plot_frame(home_team, away_team, colors=('r', 'b'), PlayerMarkerSize=10, PlayerAlpha=0.7, annotate=False, velocity=False):
-  fig, ax = plot_field()
+def plot_frame(home_team, away_team, colors=('r', 'b'), PlayerMarkerSize=10, PlayerAlpha=0.7, annotate=False, velocity=False, figax=None):
+  if figax is None: # create new pitch 
+    fig,ax = plot_field()
+  else: # overlay on a previously generated pitch
+    fig,ax = figax # unpack tuple
   for team,color in zip( [home_team, away_team], colors):
     x_columns = [c for c in team.keys() if c[-2:].lower() == '_x' and c != 'ball_x']
     y_columns = [c for c in team.keys() if c[-2:].lower() == '_y' and c != 'ball_y']
@@ -227,4 +230,19 @@ def plot_type_distance_covered(team, team_str):
 
 
 
-  
+
+def plot_pitch_control_for_event(event_id, events, home, away, PPCF, xgrid, ygrid, alpha = 0.7, include_player_velocities=True, annotate=True):
+  pass_frame = events.loc[event_id]['Start Frame']
+  pass_team = events.loc[event_id].Team
+
+  fig, ax = plot_field()
+  plot_frame(home.loc[pass_frame], away.loc[pass_frame], figax=(fig,ax), PlayerAlpha=alpha, velocity=include_player_velocities, annotate=annotate)
+  plot_events(events.loc[event_id:event_id], figax=(fig,ax), annotate=False, color='k', alpha=1)
+
+  if pass_team == 'Home':
+    cmap = 'bwr'
+  else:
+    cmap = 'bwr_r'
+
+  ax.imshow(np.flipud(PPCF), extent=(-106/2., 106/2., -68/2., 68/2.), interpolation='spline36', vmin=0.0, vmax=1.0, cmap=cmap, alpha=0.5)
+  return fig,ax

@@ -4,7 +4,7 @@
 import DataFunctions as getdata
 import PlotFunctions as getplot
 import Statistics as getstats
-import PitchControl as getpitchcontrol
+import PitchControl_copy as getpitchcontrol
 dir = '../../NewNames'
 
 # %% -- Lectura de los datos
@@ -43,4 +43,7 @@ getplot.plot_frame(home.iloc[820], away.iloc[820])
 params = getpitchcontrol.default_params()
 
 PPCF, xgrid, ygrid = getpitchcontrol.generate_pitch_control(820, events, home, away, params, n_grid_cells_x=50)
+
+# %%
+getplot.plot_pitch_control_for_event( 820, events, home, away, PPCF, xgrid, ygrid, annotate=True )
 # %%

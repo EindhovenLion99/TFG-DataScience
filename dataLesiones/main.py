@@ -56,15 +56,15 @@ F8 = 'Sprint'
 F9 = 'Sentadilla brazo'
 
 # %%
-getplot.plotFactorRiesgo(f_riesgo, F9)
+getplot.plotFactorRiesgo(f_riesgo, F6)
 
 #%%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
-getplot.plotLesionFactor(data, 'Parte', F9, figsize=(12,15))
+getplot.plotLesionFactor(data, 'Parte', F6, figsize=(12,15))
 
 # %%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
-getplot.plotFactorRiesgoCombinado(data, [F9, F8, F7], 'Parte')
+getplot.plotFactorRiesgoCombinado(data, [F6, F8], 'Parte')
 
 
 # %%
