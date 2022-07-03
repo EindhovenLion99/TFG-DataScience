@@ -11,17 +11,26 @@ dir = '../../NewNames'
 home, away, events = getdata.read_match_data(2, dir)
 
 # %%
-home
-# %%
-getstats.plotTeamPosesion(events)
-getplot.plot_frame(home.iloc[2891], away.iloc[2891], annotate=True, velocity=True)
+getstats.plotTeamPosesion(events, figsize=(8,8))
 
+# %%
+getstats.plotTeamStats(events, 'SET PIECE', 'THROW IN')
+
+# %%
+getplot.plot_events(events.loc[(events['Type'] == 'SHOT') & (events['Team'] == 'Home') & (events['Subtype'] == 'ON TARGET-GOAL')])
+
+# %%
+getplot.plot_frame(home.iloc[2654], away.iloc[2654], annotate=True, velocity=True)
+
+
+# %%
+getplot.plot_type_distance_covered(home, 'home', figsize=(15,10))
 
 # %%
 goals = events.loc[events['Subtype'].str.contains('TARGET-GOAL', na=False)]
-START_FRAME = events.loc[goals.index[0]]['Start Frame'] - 25 * 10
+START_FRAME = events.loc[goals.index[1]]['Start Frame'] - 25 * 10
 END_FRAME = START_FRAME + 25 * 60 * 0.25
-getplot.clip(home.loc[START_FRAME:END_FRAME], away.loc[START_FRAME:END_FRAME], path='.', PlayerMarkerSize=11, velocity=True, annotate=True)
+getplot.clip(home.loc[START_FRAME:END_FRAME], away.loc[START_FRAME:END_FRAME], path='.', PlayerMarkerSize=11, velocity=True)
 
 
 # %%

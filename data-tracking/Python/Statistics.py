@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import math
 
 
-def plotTeamPosesion(events):
+def plotTeamPosesion(events, figsize=(10,10)):
   teams = ["Away", "Home"]
   total_passes = events.loc[events['Type'] == 'PASS', 'Type'].count()
   home_possession = events.loc[(events['Type'] == 'PASS') & (events['Team'] == 'Home'), 'Type'].count() / total_passes
@@ -14,21 +14,16 @@ def plotTeamPosesion(events):
   data = {'Team': teams, 'Possession': possession}
   df = pd.DataFrame(data ,columns=['Team','Possession'])
   df = df.set_index('Team')
-  df.plot(kind='pie', y="Possession", shadow=True, startangle=90, autopct='%1.1f%%')
+  df.plot(kind='pie', y="Possession", shadow=True, startangle=90, autopct='%1.1f%%', figsize=figsize, colors=['blue','red'])
 
 # Crea un grafico del total de eventos de cada equipo
 
 def plotTeamStats(events, type, subtype=None):
   label = ""
   if subtype:
-    if type.upper() in events['Type'].unique() and subtype.upper() in events.loc[events['Type'] == type.upper(), 'Subtype'].unique():
-        print("Entra 1")
-        stats = events.loc[(events['Type'] == type.upper()) & (events['Subtype'] == subtype.upper())]
-        team_stats = stats.groupby('Team')['Type'].count()
-        label = type.upper() + " - " + subtype.upper()
-    else:
-      print("TYPES NOT AVAILABLE")
-      sys.exit()
+    stats = events.loc[(events['Type'] == type.upper()) & (events['Subtype'].str.contains(subtype.upper()))]
+    team_stats = stats.groupby('Team')['Type'].count()
+    label = type.upper() + " - " + subtype.upper()
   elif type.upper() in events['Type'].unique():
     stats = events.loc[events['Type'] == type.upper()]
     team_stats = stats.groupby('Team')['Type'].count()
@@ -41,6 +36,6 @@ def plotTeamStats(events, type, subtype=None):
   max_stat = team_stats.max()
   if label == "":
     label = type.upper()
-  print(team_stats)
-  team_stats.plot(kind = 'bar', ylabel = label, yticks = range(0,max_stat+1,math.ceil(max_stat/10)), color=['blue', 'red',])
-
+  ax = team_stats.plot(kind = 'bar', ylabel = label, yticks = range(0,max_stat+1,math.ceil(max_stat/10)), color=['blue', 'red',])
+  for container in ax.containers:
+    ax.bar_label(container)

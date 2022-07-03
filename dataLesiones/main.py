@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from itertools import combinations
+import sweetviz as sv
 
 jugadores, f_riesgo = getdata.read_data('.')
 completeTable = getdata.combineData2Excel(jugadores, f_riesgo)
@@ -15,11 +16,11 @@ getplot.plotEdadesJugadores("Padre Anchieta", jugadores)
 getplot.plotEdadesJugadores("Marino", jugadores)
 
 # %%
-getplot.plotNumLesionesPorEquipo(jugadores, 'Total Lesiones Actuales')
-getplot.plotNumLesionesPorEquipoAgrupadas(jugadores, 'Total Lesiones Actuales')
+getplot.plotNumLesionesPorEquipo(jugadores, 'Total Lesiones Previas')
+getplot.plotNumLesionesPorEquipoAgrupadas(jugadores, 'Total Lesiones Previas')
 
 # %%
-getplot.plotInjuriesType(lesiones_actuales, 'Parte', figsize=(10,10), kind='barh')
+getplot.plotInjuriesType(lesiones_actuales, 'Grupo Muscular', figsize=(10,10), kind='barh')
 
 # %%
 lesion_preparacion = getdata.compareInjuriesWith(jugadores, 'Preparación')
@@ -38,7 +39,7 @@ getplot.plotCompareWith(lesion_escoliosis, figsize=(15,9))
 
 
 # %%
-lesiones_actuales = getdata.getInjuriesTable(jugadores, 'Lesiones Previas', COMBO=True)
+lesiones_actuales = getdata.getInjuriesTable(jugadores, 'Lesiones Actuales', COMBO=False)
 
 # %%
 f_riesgo_index = f_riesgo.set_index('Jugador')
@@ -60,11 +61,15 @@ getplot.plotFactorRiesgo(f_riesgo, F6)
 
 #%%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
+data = data.drop(columns=['Equipo_y', 'Vector Lesiones'])
+analyze_report = sv.analyze(data)
+analyze_report.show_html('analize.html')
+
 getplot.plotLesionFactor(data, 'Parte', F6, figsize=(12,15))
 
 # %%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
-getplot.plotFactorRiesgoCombinado(data, [F6, F8], 'Parte')
+getplot.plotFactorRiesgoCombinado(data, [F7, F8], 'Parte')
 
 
 # %%

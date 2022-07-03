@@ -181,7 +181,7 @@ def plot_minutes_played(team, team_str):
 
 def plot_total_distance(team, team_str):
   team_str = team_str.lower()
-  players = np.unique([c.split('_')[1] + "_" + c.split('_')[2] for c in team.columns if c[:4] == team_str])
+  players = np.unique([c.split('_')[1] for c in team.columns if c[:4] == team_str])
   player_summary = pd.DataFrame(index = players)
 
   distance = []
@@ -197,14 +197,14 @@ def plot_total_distance(team, team_str):
   player_summary['Total Distance'].plot.bar(figsize=(10,8))
 
 
-def plot_type_distance_covered(team, team_str):
+def plot_type_distance_covered(team, team_str, figsize=(10,10)):
   walking = []
   jogging = []
   running = []
   sprinting = []
 
   team_str = team_str.lower()
-  players = np.unique([c.split('_')[1] + "_" + c.split('_')[2] for c in team.columns if c[:4] == team_str])
+  players = np.unique([c.split('_')[1] for c in team.columns if c[:4] == team_str])
   player_summary = pd.DataFrame(index = players)
 
   for pl in players:
@@ -223,7 +223,7 @@ def plot_type_distance_covered(team, team_str):
   player_summary['Running'] = running
   player_summary['Sprinting'] = sprinting
 
-  ax = player_summary[['Walking','Jogging','Running','Sprinting']].plot.bar(colormap='coolwarm')
+  ax = player_summary[['Walking','Jogging','Running','Sprinting']].plot.bar(colormap='coolwarm', figsize=figsize)
   ax.set_xlabel('Player')
   ax.set_ylabel('Distance covered')
 
