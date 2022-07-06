@@ -42,8 +42,8 @@ def plotLesionFactor(jugadores, tipo, factor, figsize, mixed=False):
     ax_.bar_label(c, labels=labels, label_type='center')
 
 def plotInjuriesType(lesiones, tipo, figsize=(10,8), kind='bar'):
-  lesiones['Grupo Muscular'] = lesiones['Vector Lesiones'].str.split('-').str[-1]
-  lesiones['Parte'] = lesiones['Vector Lesiones'].str.split('-').str[1]
+  lesiones['Parte'] = lesiones['Vector Lesiones'].str.split('-').str[-1]
+  lesiones['Grupo Muscular'] = lesiones['Vector Lesiones'].str.split('-').str[1]
   lesiones['Lesion'] = lesiones['Vector Lesiones'].str.split('-').str[0]
   lesiones = lesiones.drop(lesiones[lesiones.Lesion == 'No'].index)
 

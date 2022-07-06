@@ -20,7 +20,7 @@ getplot.plotNumLesionesPorEquipo(jugadores, 'Total Lesiones Previas')
 getplot.plotNumLesionesPorEquipoAgrupadas(jugadores, 'Total Lesiones Previas')
 
 # %%
-getplot.plotInjuriesType(lesiones_actuales, 'Grupo Muscular', figsize=(10,10), kind='barh')
+getplot.plotInjuriesType(lesiones_actuales, 'Parte', figsize=(10,10), kind='barh')
 
 # %%
 lesion_preparacion = getdata.compareInjuriesWith(jugadores, 'Preparación')
@@ -39,7 +39,7 @@ getplot.plotCompareWith(lesion_escoliosis, figsize=(15,9))
 
 
 # %%
-lesiones_actuales = getdata.getInjuriesTable(jugadores, 'Lesiones Actuales', COMBO=False)
+lesiones_actuales = getdata.getInjuriesTable(jugadores, 'Lesiones Previas', COMBO=True)
 
 # %%
 f_riesgo_index = f_riesgo.set_index('Jugador')
@@ -47,29 +47,28 @@ f_riesgo_index = f_riesgo.set_index('Jugador')
 
 # %%
 F1 = 'V/V CALCÁNEO'
-F2 = '1º DEDO RIG.'
+F2 = 'DFP'
 F3 = 'V/V RODILLA'
 F4 = 'D. UNIPODAL'
 F5 = 'D. BIPODAL'
 F6 = 'GL. MEDIO'
 F7 = 'ANTE-RETRO'
 F8 = 'Sprint'
-F9 = 'Sentadilla brazo'
+F9 = 'Overhead Squat'
 
 # %%
-getplot.plotFactorRiesgo(f_riesgo, F6)
+getplot.plotFactorRiesgo(f_riesgo, F2)
 
 #%%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
-data = data.drop(columns=['Equipo_y', 'Vector Lesiones'])
-analyze_report = sv.analyze(data)
-analyze_report.show_html('analize.html')
-
-getplot.plotLesionFactor(data, 'Parte', F6, figsize=(12,15))
+#data = data.drop(columns=['Equipo_y', 'Vector Lesiones'])
+#analyze_report = sv.analyze(data)
+#analyze_report.show_html('analize.html')
+getplot.plotLesionFactor(data, 'Grupo Muscular', F9, figsize=(12,15))
 
 # %%
 data = getdata.combineData2Excel(lesiones_actuales, f_riesgo_index)
-getplot.plotFactorRiesgoCombinado(data, [F7, F8], 'Parte')
+getplot.plotFactorRiesgoCombinado(data, [F1, F3], 'Grupo Muscular')
 
 
 # %%

@@ -34,8 +34,8 @@ def getInjuriesTable(jugadores, periodo_lesion, COMBO=False):
   lesiones_previas['Vector Lesiones'] = lesiones_previas[periodo_lesion].str.split(" ; ")
   lesiones_previas = lesiones_previas.explode('Vector Lesiones')
   lesiones_previas['Lesion'] = lesiones_previas['Vector Lesiones'].str.split("-").str[0]
-  lesiones_previas['Parte'] = lesiones_previas['Vector Lesiones'].str.split("-").str[1]
-  lesiones_previas['Grupo Muscular'] = lesiones_previas['Vector Lesiones'].str.split("-").str[-1]
+  lesiones_previas['Grupo Muscular'] = lesiones_previas['Vector Lesiones'].str.split("-").str[1]
+  lesiones_previas['Parte'] = lesiones_previas['Vector Lesiones'].str.split("-").str[-1]
   lesiones_previas = lesiones_previas.drop(columns=[periodo_lesion])
   return lesiones_previas
 
